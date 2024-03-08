@@ -1,95 +1,87 @@
+import {
+  MusicalNoteIcon,
+  HeartIcon,
+  CalendarDaysIcon,
+  UserCircleIcon,
+  SparklesIcon,
+  ArrowLeftEndOnRectangleIcon, CubeIcon
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
-import styles from "./page.module.css";
+import Hebie from "@/public/photo/HebieHair.jpg"
+import * as React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="flex flex-col items-center justify-center space-y-8 pt-32 selection:bg-red-200">
+        <div className="text-8xl font-serif text-red-900">
+          OMORI STUDIO
+        </div>
+        <div className="text-2xl font-serif text-red-900">
+          Stretch Your Every Precious Moment
+        </div>
+        <div className="bg-white rounded-full shadow-xl shadow-red-100">
+          <div className="flex items-center space-x-2 m-1">
+            <div
+              className="flex hover:bg-red-50 items-center space-x-1 text-red-950 hover:text-red-800 font-serif text-xl px-6 py-4 rounded-full transition duration-300">
+              <MusicalNoteIcon className="h-6"/>
+              <div>
+                Concert
+              </div>
+            </div>
+            <div
+              className="flex hover:bg-red-50 items-center space-x-1 text-red-950 hover:text-red-800 font-serif text-xl px-6 py-4 rounded-full transition duration-300">
+              <HeartIcon className="h-6"/>
+              <div>
+                Pre-Wedding
+              </div>
+            </div>
+            <div
+              className="flex hover:bg-red-50 items-center space-x-1 text-red-950 hover:text-red-800 font-serif text-xl px-6 py-4 rounded-full transition duration-300">
+              <CalendarDaysIcon className="h-6"/>
+              <div>
+                Big-Day
+              </div>
+            </div>
+            <div
+              className="flex hover:bg-red-50 items-center space-x-1 text-red-950 hover:text-red-800 font-serif text-xl px-6 py-4 rounded-full transition duration-300">
+              <UserCircleIcon className="h-6"/>
+              <div>
+                Portrait
+              </div>
+            </div>
+            <div
+              className="flex hover:bg-red-50 items-center space-x-1 text-red-950 hover:text-red-800 font-serif text-xl px-6 py-4 rounded-full transition duration-300">
+              <SparklesIcon className="h-6"/>
+              <div>
+                Event
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="px-32 pt-28 flex items-center space-x-16">
+          <Image src={Hebie} alt={"Hebie"} className="w-5/12 rounded-3xl shadow-xl shadow-red-100 hover:scale-105 transition ease-in-out duration-700"/>
+          <div className="flex-col space-y-6">
+            <div className="flex flex-col space-y-2">
+              <div className="text-3xl font-serif text-red-900">
+                From Photography, Videography to Graphical Design,
+              </div>
+              <div className="text-3xl font-serif text-red-950">
+                a streamlined service that you can count on.
+              </div>
+            </div>
+            <Link
+              href="services"
+              className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-2xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-6 py-3 rounded-full ease-in-out transition duration-300">
+              <CubeIcon className="h-10"/>
+              <div>
+                Find your plan
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
