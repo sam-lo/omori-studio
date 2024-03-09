@@ -1,5 +1,6 @@
 import {
-  CalendarDaysIcon,
+  AcademicCapIcon,
+  CalendarDaysIcon, CalendarIcon,
   CameraIcon,
   CheckBadgeIcon,
   ChevronUpDownIcon,
@@ -23,6 +24,12 @@ export default function EPPricing() {
         <UserCircleIcon className="h-7"/>
         <div>
           Fine-art Portrait
+        </div>
+      </div>
+      <div className="flex items-center space-x-2 font-serif text-xl text-red-900">
+        <AcademicCapIcon className="h-7"/>
+        <div>
+          Graduation Day
         </div>
       </div>
       <div className="flex items-center space-x-2 font-serif text-xl text-red-900">

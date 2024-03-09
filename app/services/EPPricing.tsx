@@ -1,4 +1,5 @@
 import {
+  AcademicCapIcon, CakeIcon,
   CalendarDaysIcon,
   CalendarIcon,
   CameraIcon, CheckBadgeIcon, ChevronUpDownIcon,
@@ -29,6 +30,12 @@ export default function SPPricing() {
         <MusicalNoteIcon className="h-7"/>
         <div>
           Musical Concert
+        </div>
+      </div>
+      <div className="flex items-center space-x-2 font-serif text-xl text-red-900">
+        <CakeIcon className="h-7"/>
+        <div>
+          Party / Banquet
         </div>
       </div>
       <div className="text-4xl text-red-900 font-serif font-bold tracking-widest py-6">

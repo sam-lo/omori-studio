@@ -1,6 +1,8 @@
 import * as React from "react";
 import SPPricing from "@/app/services/SPPricing";
 import EPPricing from "@/app/services/EPPricing";
+import {CalendarDaysIcon, HandThumbUpIcon, HomeIcon, PencilSquareIcon} from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -12,9 +14,35 @@ export default function Services() {
         <div className="text-red-950 opacity-60 font-serif text-2xl">
           Start by picking the type of service you want
         </div>
+        <div className="flex space-x-4 items-center text-red-900 text-2xl font-serif">
+          <div className="opacity-80">
+            Are you working on a non-profit project?
+          </div>
+          <Link
+            href="/"
+            className="flex items-center space-x-2 hover:bg-red-400 text-red-900 hover:text-white hover:shadow-lg hover:shadow-red-300 px-4 py-2 rounded-3xl ease-in-out transition duration-300">
+            <HandThumbUpIcon className="h-8 stroke-2"/>
+            <div>
+              Let us help you for free!
+            </div>
+          </Link>
+        </div>
         <div className="flex space-x-8 py-12">
-          <SPPricing />
-          <EPPricing />
+          <SPPricing/>
+          <EPPricing/>
+        </div>
+        <div className="flex items-center space-x-8">
+          <div className="text-red-900 opacity-60 text-3xl font-serif">
+            Cannot find the plan that fits you?
+          </div>
+          <Link
+            href="/"
+            className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-2xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-6 py-3 rounded-full ease-in-out transition duration-300">
+            <PencilSquareIcon className="h-10"/>
+            <div>
+              Get Your Personalize Quote
+            </div>
+          </Link>
         </div>
       </div>
     </>
