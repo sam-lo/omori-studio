@@ -1,5 +1,5 @@
 import {
-  AcademicCapIcon,
+  AcademicCapIcon, AdjustmentsHorizontalIcon,
   CalendarDaysIcon, CalendarIcon,
   CameraIcon,
   CheckBadgeIcon,
@@ -14,36 +14,36 @@ export default function EPPricing() {
   return (
     <div
       className="flex flex-col space-y-2 p-14 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
-      <div className="flex space-x-2 font-serif text-4xl text-red-900 pb-4">
-        <CameraIcon className="h-10"/>
+      <div className="flex items-center space-x-2 font-serif text-2xl text-red-900 pb-4">
+        <CameraIcon className="h-9"/>
         <div>
           Still Photography
         </div>
       </div>
-      <div className="flex items-center space-x-2 font-serif text-xl text-red-900">
+      <div className="flex items-center space-x-2 font-serif text-lg text-red-900">
         <UserCircleIcon className="h-7"/>
         <div>
           Fine-art Portrait
         </div>
       </div>
-      <div className="flex items-center space-x-2 font-serif text-xl text-red-900">
+      <div className="flex items-center space-x-2 font-serif text-lg text-red-900">
         <AcademicCapIcon className="h-7"/>
         <div>
           Graduation Day
         </div>
       </div>
-      <div className="flex items-center space-x-2 font-serif text-xl text-red-900">
+      <div className="flex items-center space-x-2 font-serif text-lg text-red-900">
         <HeartIcon className="h-7"/>
         <div>
           Pre-Wedding
         </div>
       </div>
-      <div className="text-4xl text-red-900 font-serif font-bold tracking-widest py-6">
+      <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         1 6 8 0 H K D
       </div>
       <Link
         href="/"
-        className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-2xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-6 py-3 rounded-full ease-in-out transition duration-300">
+        className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-4 py-2 rounded-full ease-in-out transition duration-300">
         <CalendarDaysIcon className="h-10"/>
         <div>
           Make Your Booking Now
@@ -51,17 +51,15 @@ export default function EPPricing() {
       </Link>
       <div className="flex-col space-y-8 pt-8">
         <div className="flex flex-col space-y-4">
-          <div className="text-xl text-red-900 font-serif">
-            <div className="text-xl text-red-900 font-serif">
-              <div className="flex items-center space-x-2 -translate-x-5">
-                <CheckBadgeIcon className="h-10"/>
-                <div>
-                  What is included?
-                </div>
+          <div className="text-lg text-red-900 font-serif">
+            <div className="flex items-center space-x-2 -translate-x-3">
+              <CheckBadgeIcon className="h-8"/>
+              <div>
+                What is included?
               </div>
             </div>
           </div>
-          <ul className="list-disc list-inside text-red-900 font-serif text-lg">
+          <ul className="list-disc list-inside text-red-900 font-serif space-y-2">
             <li>
               120 Minutes of Photo Shooting
             </li>
@@ -80,17 +78,15 @@ export default function EPPricing() {
           </ul>
         </div>
         <div className="flex flex-col space-y-4">
-          <div className="text-xl text-red-900 font-serif">
-            <div className="text-xl text-red-900 font-serif">
-              <div className="flex items-center space-x-2 -translate-x-5">
-                <ChevronUpDownIcon className="h-10"/>
-                <div>
-                  Add-Ons Services (Optionals)
-                </div>
+          <div className="text-lg text-red-900 font-serif">
+            <div className="flex items-center space-x-2 -translate-x-3">
+              <AdjustmentsHorizontalIcon className="h-8"/>
+              <div>
+                Add-Ons Services (Optionals)
               </div>
             </div>
           </div>
-          <ul className="list-disc list-inside text-red-900 font-serif text-lg">
+          <ul className="list-disc list-inside text-red-900 font-serif space-y-2">
             <li>
               Make-Up & Hair-Style Artist (+480HKD)
             </li>
