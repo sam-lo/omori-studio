@@ -35,16 +35,16 @@ export default function Header() {
           </Link>
           <div
             className="flex space-x-2 hover:bg-red-400 text-red-950 hover:text-white hover:shadow-lg hover:shadow-red-300 px-4 py-2 rounded-3xl ease-in-out transition duration-300">
-            <InformationCircleIcon className="h-6"/>
+            <BuildingLibraryIcon className="h-6"/>
             <div>
-              About Us
+              Gallery
             </div>
           </div>
           <div
             className="flex space-x-2 hover:bg-red-400 text-red-950 hover:text-white hover:shadow-lg hover:shadow-red-300 px-4 py-2 rounded-3xl ease-in-out transition duration-300">
-            <BuildingLibraryIcon className="h-6"/>
+            <InformationCircleIcon className="h-6"/>
             <div>
-              Gallery
+              About Us
             </div>
           </div>
           <div
@@ -55,7 +55,8 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="flex space-x-2 hover:bg-red-400 text-red-950 hover:text-white font-bold hover:shadow-lg hover:shadow-red-300 px-4 py-2 rounded-3xl ease-in-out transition duration-300">
+        <div
+          className="flex space-x-2 hover:bg-red-400 text-red-950 hover:text-white font-bold hover:shadow-lg hover:shadow-red-300 px-4 py-2 rounded-3xl ease-in-out transition duration-300">
           <div>
             Sign in
           </div>

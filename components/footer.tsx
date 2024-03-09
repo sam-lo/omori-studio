@@ -1,14 +1,15 @@
 import Link from "next/link";
 import Services from "@/app/services/page";
+import {BuildingLibraryIcon, CubeIcon, InformationCircleIcon, UserGroupIcon} from "@heroicons/react/24/outline";
 
 export default function Footer() {
   return (
     <>
-      <div className="flex space-x-16 m-24">
-        <ServiceSession />
-        <AboutUsSession />
-        <GallerySession />
-        <CollaborationsSession />
+      <div className="flex flex-row flex-wrap justify-center space-x-16 m-24">
+        <ServiceSession/>
+        <GallerySession/>
+        <AboutUsSession/>
+        <CollaborationsSession/>
       </div>
     </>
   )
@@ -17,8 +18,12 @@ export default function Footer() {
 function ServiceSession() {
   return (
     <div className="flex flex-col space-y-2">
-      <Link href="services" className="text-xl text-red-900 font-medium mb-8">
-        Services
+      <Link href="services"
+            className="flex items-center space-x-2 text-2xl text-red-900 font-medium mb-4 -translate-x-2">
+        <CubeIcon className="h-8"/>
+        <div>
+          Services
+        </div>
       </Link>
       <Link href="services" className="text-xl text-red-800">
         Still Photography
@@ -39,8 +44,11 @@ function ServiceSession() {
 function AboutUsSession() {
   return (
     <div className="flex flex-col space-y-2">
-      <Link href="/" className="text-xl text-red-900 font-medium mb-8">
-        About Us
+      <Link href="/" className="flex items-center space-x-2 text-2xl text-red-900 font-medium mb-4 -translate-x-2">
+        <InformationCircleIcon className="h-8"/>
+        <div>
+          About Us
+        </div>
       </Link>
       <Link href="/" className="text-xl text-red-800">
         Our Story
@@ -61,9 +69,12 @@ function AboutUsSession() {
 function GallerySession() {
   return (
     <div className="flex flex-col space-y-2">
-      <div className="text-xl text-red-900 font-medium mb-8">
-        Gallery
-      </div>
+      <Link href="/" className="flex items-center space-x-2 text-2xl text-red-900 font-medium mb-4 -translate-x-2">
+        <BuildingLibraryIcon className="h-8"/>
+        <div>
+          Gallery
+        </div>
+      </Link>
       <Link href="/" className="text-xl text-red-800">
         Musical Concerts
       </Link>
@@ -83,9 +94,12 @@ function GallerySession() {
 function CollaborationsSession() {
   return (
     <div className="flex flex-col space-y-2">
-      <div className="text-xl text-red-900 font-medium mb-8">
-        Collaborations
-      </div>
+      <Link href="/" className="flex items-center space-x-2 text-2xl text-red-900 font-medium mb-4 -translate-x-2">
+        <UserGroupIcon className="h-8"/>
+        <div>
+          Collaborations
+        </div>
+      </Link>
       <Link href="/" className="text-xl text-red-800">
         Our Partners
       </Link>

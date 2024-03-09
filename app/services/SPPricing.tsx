@@ -1,10 +1,18 @@
-import {CalendarDaysIcon, CameraIcon, HeartIcon, UserCircleIcon} from "@heroicons/react/24/outline";
+import {
+  CalendarDaysIcon,
+  CameraIcon,
+  CheckBadgeIcon,
+  ChevronUpDownIcon,
+  HeartIcon,
+  UserCircleIcon
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 import * as React from "react";
 
 export default function EPPricing() {
   return (
-    <div className="flex flex-col space-y-2 p-14 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
+    <div
+      className="flex flex-col space-y-2 p-14 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
       <div className="flex space-x-2 font-serif text-4xl text-red-900 pb-4">
         <CameraIcon className="h-10"/>
         <div>
@@ -37,7 +45,14 @@ export default function EPPricing() {
       <div className="flex-col space-y-8 pt-8">
         <div className="flex flex-col space-y-4">
           <div className="text-xl text-red-900 font-serif">
-            What is included?
+            <div className="text-xl text-red-900 font-serif">
+              <div className="flex items-center space-x-2 -translate-x-5">
+                <CheckBadgeIcon className="h-10"/>
+                <div>
+                  What is included?
+                </div>
+              </div>
+            </div>
           </div>
           <ul className="list-disc list-inside text-red-900 font-serif text-lg">
             <li>
@@ -47,16 +62,26 @@ export default function EPPricing() {
               50+ Essentially Retouched Photo
             </li>
             <li>
-              15 Photo will be Finely Tuned
+              30 Photo will be Finely Tuned
             </li>
             <li>
-              Photo will be returned in 3 days
+              30-Day High-Speed Cloud Access
+            </li>
+            <li>
+              All Photo will be returned within 5 days
             </li>
           </ul>
         </div>
         <div className="flex flex-col space-y-4">
           <div className="text-xl text-red-900 font-serif">
-            Add-Ons Services (Optionals)
+            <div className="text-xl text-red-900 font-serif">
+              <div className="flex items-center space-x-2 -translate-x-5">
+                <ChevronUpDownIcon className="h-10"/>
+                <div>
+                  Add-Ons Services (Optionals)
+                </div>
+              </div>
+            </div>
           </div>
           <ul className="list-disc list-inside text-red-900 font-serif text-lg">
             <li>
