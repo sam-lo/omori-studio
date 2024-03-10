@@ -1,11 +1,9 @@
-import Link from "next/link";
-import Services from "@/app/services/page";
 import {BuildingLibraryIcon, CubeIcon, InformationCircleIcon, UserGroupIcon} from "@heroicons/react/24/outline";
 
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-row flex-wrap justify-center space-x-16 m-24">
+      <div className="flex flex-row flex-wrap justify-center space-x-16 m-24 selection:bg-red-200">
         <ServiceSession/>
         <GallerySession/>
         <AboutUsSession/>
@@ -18,24 +16,24 @@ export default function Footer() {
 function ServiceSession() {
   return (
     <div className="flex flex-col space-y-2 text-red-800">
-      <Link href="service" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
+      <a href="/services" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
         <CubeIcon className="h-6"/>
         <div>
           Services
         </div>
-      </Link>
-      <Link href="services">
+      </a>
+      <a href="/services">
         Still Photography
-      </Link>
-      <Link href="services">
+      </a>
+      <a href="/services">
         Event Package
-      </Link>
-      <Link href="services">
-        Business Combination
-      </Link>
-      <Link href="services">
+      </a>
+      <a href="/services">
+        Business Quotation
+      </a>
+      <a href="/services">
         Non-Profit Project
-      </Link>
+      </a>
     </div>
   )
 }
@@ -43,24 +41,24 @@ function ServiceSession() {
 function GallerySession() {
   return (
     <div className="flex flex-col space-y-2 text-red-800">
-      <Link href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
+      <a href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
         <BuildingLibraryIcon className="h-6"/>
         <div>
           Gallery
         </div>
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Musical Concerts
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Pre-Wedding & Big-Day
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Fine-Art Portraits
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Business Event
-      </Link>
+      </a>
     </div>
   )
 }
@@ -68,24 +66,24 @@ function GallerySession() {
 function AboutUsSession() {
   return (
     <div className="flex flex-col space-y-2 text-red-800">
-      <Link href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
+      <a href="/about" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
         <InformationCircleIcon className="h-6"/>
         <div>
           About Us
         </div>
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Download Resource
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Press Release
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Contact Us
-      </Link>
-      <Link href="/">
-        Join Omori Studio
-      </Link>
+      </a>
+      <a href="/about/career">
+        Join Omri Studio
+      </a>
     </div>
   )
 }
@@ -94,24 +92,24 @@ function AboutUsSession() {
 function CollaborationsSession() {
   return (
     <div className="flex flex-col space-y-2 text-red-800">
-      <Link href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
+      <a href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
         <UserGroupIcon className="h-6"/>
         <div>
           Collaborations
         </div>
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Our Partners
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         How it works
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Partners Review
-      </Link>
-      <Link href="/">
+      </a>
+      <a href="/">
         Join Partnership
-      </Link>
+      </a>
     </div>
   )
 }

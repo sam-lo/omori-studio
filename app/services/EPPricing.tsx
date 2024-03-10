@@ -1,19 +1,17 @@
 import {
-  AcademicCapIcon, AdjustmentsHorizontalIcon, CakeIcon,
+  AdjustmentsHorizontalIcon, CakeIcon,
   CalendarDaysIcon,
   CalendarIcon,
-  CameraIcon, CheckBadgeIcon, ChevronUpDownIcon,
-  HeartIcon,
+  CheckBadgeIcon,
   MusicalNoteIcon,
-  UserCircleIcon, VideoCameraIcon
+  VideoCameraIcon
 } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import * as React from "react";
 
 export default function SPPricing() {
   return (
     <div
-      className="flex flex-col space-y-2 p-14 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
+      className="flex flex-col space-y-2 p-12 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
       <div className="flex items-center space-x-2 font-serif text-2xl text-red-900 pb-4">
         <VideoCameraIcon className="h-9"/>
         <div>
@@ -41,16 +39,16 @@ export default function SPPricing() {
       <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         9 8 0 H K D / H R
       </div>
-      <Link
+      <a
         href="/"
         className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-4 py-2 rounded-full ease-in-out transition duration-300">
         <CalendarDaysIcon className="h-10"/>
         <div>
           Make Your Booking Now
         </div>
-      </Link>
+      </a>
       <div className="flex-col space-y-8 pt-8">
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 h-56">
           <div className="text-lg text-red-900 font-serif">
             <div className="flex items-center space-x-2 -translate-x-3">
               <CheckBadgeIcon className="h-8"/>
