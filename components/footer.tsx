@@ -3,11 +3,16 @@ import {BuildingLibraryIcon, CubeIcon, InformationCircleIcon, UserGroupIcon} fro
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-row flex-wrap justify-center space-x-16 m-24 selection:bg-red-200">
-        <ServiceSession/>
-        <GallerySession/>
-        <AboutUsSession/>
-        <CollaborationsSession/>
+      <div className="flex flex-col gap-8 mb-2 mt-16 mx-16 selection:bg-red-200">
+        <div className="flex flex-wrap justify-center gap-16">
+          <ServiceSession/>
+          <GallerySession/>
+          <AboutUsSession/>
+          <CollaborationsSession/>
+        </div>
+        <div className="text-red-900 text-sm">
+          © 2024 OMORI STUDIO. All rights reserved.
+        </div>
       </div>
     </>
   )
@@ -41,22 +46,23 @@ function ServiceSession() {
 function GallerySession() {
   return (
     <div className="flex flex-col space-y-2 text-red-800">
-      <a href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
+      <a href="/maintenance"
+         className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
         <BuildingLibraryIcon className="h-6"/>
         <div>
           Gallery
         </div>
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Musical Concerts
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Pre-Wedding & Big-Day
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Fine-Art Portraits
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Business Event
       </a>
     </div>
@@ -72,13 +78,13 @@ function AboutUsSession() {
           About Us
         </div>
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Download Resource
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Press Release
       </a>
-      <a href="/">
+      <a href="/about/contact">
         Contact Us
       </a>
       <a href="/about/career">
@@ -92,22 +98,23 @@ function AboutUsSession() {
 function CollaborationsSession() {
   return (
     <div className="flex flex-col space-y-2 text-red-800">
-      <a href="/" className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
+      <a href="/maintenance"
+         className="flex items-center space-x-2 text-xl text-red-900 font-medium mb-2 -translate-x-2">
         <UserGroupIcon className="h-6"/>
         <div>
           Collaborations
         </div>
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Our Partners
       </a>
-      <a href="/">
+      <a href="/maintenance">
         How it works
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Partners Review
       </a>
-      <a href="/">
+      <a href="/maintenance">
         Join Partnership
       </a>
     </div>

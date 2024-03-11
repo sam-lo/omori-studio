@@ -30,13 +30,14 @@ export default function Header() {
               Services
             </div>
           </a>
-          <div
+          <a
+            href="/maintenance"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-950 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <BuildingLibraryIcon className="h-6"/>
             <div>
               Gallery
             </div>
-          </div>
+          </a>
           <a
             href="/about"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-950 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
@@ -45,25 +46,27 @@ export default function Header() {
               About Us
             </div>
           </a>
-          <div
+          <a
+            href="/maintenance"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-950 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <UserGroupIcon className="h-6"/>
             <div>
               Collaborations
             </div>
-          </div>
+          </a>
         </div>
         <div className="flex items-center space-x-2">
           <div className="hover:bg-red-400 text-red-950 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <LanguageIcon className="h-6" />
           </div>
-          <div
+          <a
+            href="/maintenance"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-950 hover:text-white font-bold hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <div>
               Sign in
             </div>
             <ArrowLeftEndOnRectangleIcon className="h-6 stroke-2"/>
-          </div>
+          </a>
         </div>
       </div>
     </>

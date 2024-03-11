@@ -7,10 +7,10 @@ export default function Services() {
   return (
     <>
       <div className="flex flex-col justify-center items-center space-y-6 py-24 selection:bg-red-200">
-        <div className="text-red-950 text-4xl font-serif">
+        <div className="text-red-900 text-4xl font-serif">
           Choose the plan that fits you the most
         </div>
-        <div className="text-red-950 opacity-60 font-serif text-xl">
+        <div className="text-red-900 opacity-60 font-serif text-xl">
           Start by picking the type of service you want
         </div>
         <div className="flex space-x-4 items-center text-red-900 text-xl font-serif">
@@ -37,7 +37,7 @@ export default function Services() {
           <a
             href="/"
             className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-4 py-2 rounded-full ease-in-out transition duration-300">
-            <PencilSquareIcon className="h-10"/>
+            <PencilSquareIcon className="h-8"/>
             <div>
               Get Your Personalize Quote
             </div>

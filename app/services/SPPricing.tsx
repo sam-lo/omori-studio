@@ -8,6 +8,7 @@ import {
   UserCircleIcon
 } from "@heroicons/react/24/outline";
 import * as React from "react";
+import BookingButton from "@/app/services/BookingButton";
 
 export default function EPPricing() {
   return (
@@ -40,14 +41,7 @@ export default function EPPricing() {
       <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         1 6 8 0 H K D
       </div>
-      <a
-        href="/"
-        className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-4 py-2 rounded-full ease-in-out transition duration-300">
-        <CalendarDaysIcon className="h-10"/>
-        <div>
-          Make Your Booking Now
-        </div>
-      </a>
+      <BookingButton />
       <div className="flex-col space-y-8 pt-8">
         <div className="flex flex-col space-y-4 h-56">
           <div className="text-lg text-red-900 font-serif">

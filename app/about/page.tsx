@@ -1,10 +1,9 @@
 import {
   ChatBubbleOvalLeftEllipsisIcon,
   CloudArrowDownIcon,
-  NewspaperIcon,
+  NewspaperIcon, QuestionMarkCircleIcon,
   UserPlusIcon
 } from "@heroicons/react/24/outline";
-import Link from "next/link";
 
 export default function AboutUs() {
 
@@ -22,8 +21,11 @@ export default function AboutUs() {
         <div className="text-center text-xl font-serif text-red-700 w-3/4 py-4">
           {ourAim}
         </div>
-        <div className="text-3xl font-serif text-red-900 pt-10 pb-6">
-          Learn More
+        <div className="flex gap-2 items-center text-3xl font-serif text-red-900 pt-10 pb-6">
+          <div className="">
+            Learn More
+          </div>
+          <QuestionMarkCircleIcon className="h-10"/>
         </div>
         <div className="flex text-red-800">
           <div
