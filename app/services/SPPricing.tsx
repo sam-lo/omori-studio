@@ -1,7 +1,6 @@
 import {
   AcademicCapIcon,
   AdjustmentsHorizontalIcon,
-  CalendarDaysIcon,
   CameraIcon,
   CheckBadgeIcon,
   HeartIcon,
@@ -41,7 +40,7 @@ export default function EPPricing() {
       <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         1 6 8 0 H K D
       </div>
-      <BookingButton />
+      <BookingButton text={"/maintenance"}/>
       <div className="flex-col space-y-8 pt-8">
         <div className="flex flex-col space-y-4 h-56">
           <div className="text-lg text-red-900 font-serif">

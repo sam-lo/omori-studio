@@ -28,20 +28,22 @@ export default function AboutUs() {
           <QuestionMarkCircleIcon className="h-10"/>
         </div>
         <div className="flex text-red-800">
-          <div
+          <a
+            href="/maintenance"
             className="flex flex-col items-center justify-center px-12 py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
             <CloudArrowDownIcon className="h-12"/>
             <div className="text-xl">
               Resources
             </div>
-          </div>
-          <div
+          </a>
+          <a
+            href="/maintenance"
             className="flex flex-col items-center justify-center px-12 py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
             <NewspaperIcon className="h-12"/>
             <div className="text-xl">
               Press Release
             </div>
-          </div>
+          </a>
           <a
             href="/about/contact"
             className="flex flex-col items-center justify-center px-12 py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">

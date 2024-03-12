@@ -40,7 +40,7 @@ export default function SPPricing() {
       <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         9 8 0 H K D / H R
       </div>
-      <BookingButton/>
+      <BookingButton text={"/maintenance"}/>
       <div className="flex-col space-y-8 pt-8">
         <div className="flex flex-col space-y-4 h-56">
           <div className="text-lg text-red-900 font-serif">
