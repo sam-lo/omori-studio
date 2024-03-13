@@ -15,10 +15,12 @@ interface LayoutProps {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <>
-      <Header />
-      <>{children}</>
-      <Footer />
-    </>
+    <html lang="en">
+    <body>
+    <Header />
+    {children}
+    <Footer />
+    </body>
+    </html>
   );
 }

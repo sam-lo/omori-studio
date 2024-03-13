@@ -1,6 +1,6 @@
 import * as React from "react";
-import SPPricing from "@/app/services/SPPricing";
-import EPPricing from "@/app/services/EPPricing";
+import SPPricing from "@/components/services/SPPricing";
+import EPPricing from "@/components/services/EPPricing";
 import { HandThumbUpIcon, PencilSquareIcon} from "@heroicons/react/24/outline";
 
 export default function Services() {

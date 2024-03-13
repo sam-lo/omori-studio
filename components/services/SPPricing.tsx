@@ -7,9 +7,9 @@ import {
   UserCircleIcon
 } from "@heroicons/react/24/outline";
 import * as React from "react";
-import BookingButton from "@/app/services/BookingButton";
+import BookingButton from "@/components/services/BookingButton";
 
-export default function EPPricing() {
+export default function SPPricing() {
   return (
     <div
       className="flex flex-col space-y-2 p-12 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
@@ -40,7 +40,7 @@ export default function EPPricing() {
       <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         1 6 8 0 H K D
       </div>
-      <BookingButton text={"/maintenance"}/>
+      <BookingButton text={"/services/booking"}/>
       <div className="flex-col space-y-8 pt-8">
         <div className="flex flex-col space-y-4 h-56">
           <div className="text-lg text-red-900 font-serif">
