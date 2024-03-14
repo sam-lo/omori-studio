@@ -20,6 +20,14 @@ const bookingSchema = new Schema({
         type: String,
         required: [true, "Email is required."]
     },
+
+    makeup: {
+        type:Boolean
+    },
+
+    bts: {
+        type:Boolean
+    }
 })
 
 const Booking= mongoose.models.Booking || mongoose.model("Booking", bookingSchema);

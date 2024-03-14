@@ -4,11 +4,11 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 
 export async function POST(req) {
-    const { fullName, phoneNumber, email } = await req.json();
+    const { fullName, phoneNumber, email, makeup, bts } = await req.json();
 
     try {
         await connectDB();
-        await Booking.create({ fullName, phoneNumber, email });
+        await Booking.create({ fullName, phoneNumber, email, makeup, bts});
 
         return NextResponse.json({
             msg: ["Message sent successfully"],
