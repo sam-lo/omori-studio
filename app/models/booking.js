@@ -1,11 +1,21 @@
 import mongoose, { Schema } from "mongoose"
 
 const bookingSchema = new Schema({
+    serviceType: {
+        type: String,
+        required:[true, "Service Type is required."]
+    },
+
+    hour: {
+        type: String,
+        required:[true, "Service Hour is mandatory."]
+    },
+
     fullName: {
         type: String,
         required: [true, "Name is required."],
         trim: true,
-        minLength: [2, "Name must be larger than 2 characters"],
+        minLength: [1, "Name must be larger than 1 characters"],
         maxLength: [50, "Name must be lesser than 50 characters"],
     },
 
