@@ -15,6 +15,10 @@ export default function BookingForm() {
   const [extra, setExtra] = useState(false);
   const [island, setIsland] = useState(false);
 
+  let isValidated = (fullName == "" || phoneNumber.length !== 8 || email == "" || !email.includes("@") || !email.includes(".") || email.length < 5)
+
+  let estimatedCost = 1680 + (makeup ? 480 : 0) + (bts ? 480 : 0) + (extra ? 120 : 0) + (island ? 120 : 0)
+
   const [error, setError] = useState([]);
 
   const handleSubmit = async (e: any) => {
@@ -56,6 +60,14 @@ export default function BookingForm() {
           <div className="text-red-900 text-4xl font-serif">
             Service Booking
           </div>
+          <div className="text-center">
+            <div className="text-xl text-red-800 opacity-80">
+              A Email will be sent to guide you for further action.
+            </div>
+            <div className="text-xl text-red-800 opacity-80">
+              Official invoice will be delivered by email.
+            </div>
+          </div>
           <div className="flex flex-col text-center items-center text-red-900 opacity-60">
             <div className="text-xl font-semibold">
               You are booking for still photography service.
@@ -65,43 +77,47 @@ export default function BookingForm() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4 justify-items-start py-8">
-            <div className="">
-              <div className="text-red-800 opacity-80 m-2">
-                Full name
+            <div className="place-self-center">
+              <div className="">
+                <div className="text-red-800 opacity-80 m-2">
+                  Full name
+                </div>
+                <input type="text"
+                       id="name"
+                       onChange={(e) => setFullName(e.target.value)}
+                       value={fullName}
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       placeholder="e.g. Leonardo da Vinci"/>
+                <NameValidation fullName={fullName}/>
               </div>
-              <input type="text"
-                     onChange={(e) => setFullName(e.target.value)}
-                     value={fullName}
-                     className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
-                     placeholder="e.g. Leonardo da Vinci"/>
-              <NameValidation fullName={fullName}/>
-            </div>
-            <div className="">
-              <div className="text-red-800 opacity-80 m-2">
-                Phone Number
+              <div className="">
+                <div className="text-red-800 opacity-80 m-2">
+                  Phone Number
+                </div>
+                <input type="tel"
+                       id="phone"
+                       onChange={(e) => setPhoneNumber(e.target.value)}
+                       value={phoneNumber}
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       placeholder="9 8 7 6 - 5 4 3 2"
+                       maxLength={8}
+                       inputMode="numeric"/>
+                <PhoneNumberValidation phoneNumber={phoneNumber}/>
               </div>
-              <input type="tel"
-                     onChange={(e) => setPhoneNumber(e.target.value)}
-                     value={phoneNumber}
-                     className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
-                     placeholder="9 8 7 6 - 5 4 3 2"
-                     maxLength={8}
-                     inputMode="numeric"/>
-              <PhoneNumber phoneNumber={phoneNumber}/>
-            </div>
-            <div className="">
-              <div className="text-red-800 opacity-80 m-2">
-                Personal Email
+              <div className="">
+                <div className="text-red-800 opacity-80 m-2">
+                  Personal Email
+                </div>
+                <input type="email"
+                       id="name"
+                       onChange={(e) => setEmail(e.target.value)}
+                       value={email}
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       placeholder="e.g. leonardo@example.com"/>
+                <EmailValidation email={email}/>
               </div>
-              <input type="email"
-                     onChange={(e) => setEmail(e.target.value)}
-                     value={email}
-                     className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
-                     placeholder="e.g. leonardo@example.com"
-                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
-              <EmailValidation email={email} />
             </div>
-            <div className="flex flex-col py-8 gap-4">
+            <div className="flex flex-col py-8 gap-4 place-self-center">
               <div className="text-red-800 opacity-80 mx-2">
                 Add-Ons (Optionals)
               </div>
@@ -186,9 +202,13 @@ export default function BookingForm() {
                 </label>
               </div>
             </div>
+            <div className="justify-self-center text-3xl text-red-800 transition-all duration-300 font-serif">
+              Estimated Total Cost: {estimatedCost} HKD
+            </div>
           </div>
           <button
-            className="group flex flex-col justify-self-center items-center justify-center gap-5 outline outline-2 outline-red-400 hover:bg-red-400 rounded-2xl pl-8 py-2 my-8">
+            disabled={isValidated}
+            className="group flex flex-col justify-self-center items-center justify-center gap-5 outline outline-2 outline-red-400 hover:bg-red-400 rounded-2xl pl-8 py-2">
             <div className="flex items-center justify-center space-x-2 text-red-400 group-hover:text-white">
               <div className="group-hover:opacity-0 transition duration-300 ease-in-out">
                 <ClipboardDocumentListIcon className="h-8"/>
@@ -207,7 +227,6 @@ export default function BookingForm() {
 }
 
 function NameValidation(props: any) {
-
   if (props.fullName == "") {
     return (
       <div
@@ -218,20 +237,18 @@ function NameValidation(props: any) {
   }
 }
 
-function PhoneNumber(props: any) {
-
+function PhoneNumberValidation(props: any) {
   if (props.phoneNumber.length !== 8) {
     return (
       <div
         className="mt-2 mx-2 text-sm text-red-500">
         Please enter a valid 8-digit phone number
       </div>
-    )
+    );
   }
 }
 
 function EmailValidation(props: any) {
-
   if (props.email == "" || props.email.includes("@") == false || props.email.includes(".") == false || props.email.length < 5) {
     return (
       <div

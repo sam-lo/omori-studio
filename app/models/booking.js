@@ -27,7 +27,15 @@ const bookingSchema = new Schema({
 
     bts: {
         type:Boolean
-    }
+    },
+
+    extra: {
+        type:Boolean
+    },
+
+    island: {
+        type:Boolean
+    },
 })
 
 const Booking= mongoose.models.Booking || mongoose.model("Booking", bookingSchema);
