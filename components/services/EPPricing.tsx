@@ -86,7 +86,7 @@ export default function EPPricing() {
               Make-Up & Hair-Style Artist (+240HKD)^
             </li>
             <li>
-              Islands District Additional fee (+80HKD)
+              Islands District Additional fee (+140HKD)
             </li>
             <li>
               Behind The Scene Video (+480HKD)

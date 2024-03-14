@@ -83,7 +83,7 @@ export default function SPPricing() {
               Make-Up & Hair-Style Artist (+480HKD)
             </li>
             <li>
-              Islands District Additional fee (+80HKD)
+              Islands District Additional fee (+120HKD)
             </li>
             <li>
               Behind The Scene video (+480HKD)
