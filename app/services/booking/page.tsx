@@ -15,6 +15,8 @@ export default function BookingForm() {
   const [extra, setExtra] = useState(false);
   const [island, setIsland] = useState(false);
 
+  const [serviceType, setServiceType] = useState("")
+
   let isValidated = (fullName == "" || phoneNumber.length !== 8 || email == "" || !email.includes("@") || !email.includes(".") || email.length < 5)
 
   let estimatedCost = 1680 + (makeup ? 480 : 0) + (bts ? 480 : 0) + (extra ? 120 : 0) + (island ? 120 : 0)
@@ -24,6 +26,7 @@ export default function BookingForm() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
+    console.log("Service Type", serviceType)
     console.log("Full name:", fullName)
     console.log("Phone Number:", phoneNumber)
     console.log("Email:", email)
@@ -37,6 +40,7 @@ export default function BookingForm() {
         "Content-type": "application/json"
       },
       body: JSON.stringify({
+        serviceType,
         fullName,
         phoneNumber,
         email,
@@ -70,13 +74,46 @@ export default function BookingForm() {
           </div>
           <div className="flex flex-col text-center items-center text-red-900 opacity-60">
             <div className="text-xl font-semibold">
-              You are booking for still photography service.
+              You are booking for {serviceType} service.
             </div>
             <div className="text-xl">
               All your data is safely stored in European Union member country.
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4 justify-items-start py-8">
+            <div className="relative justify-self-center">
+              <input type="radio" id="still" name="package" value="Still Photography"
+                     onChange={(e) => setServiceType(e.target.value)}
+                     className="hidden peer"
+                     required/>
+              <label
+                className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                htmlFor="still">
+                <div className="flex flex-row justify-between items-center w-[380px]">
+                  <div>
+                    <div className="text-red-800 font-bold">Still Photography</div>
+                    <div className="text-red-800 text-opacity-40 text-sm">All-in-one Photography Package</div>
+                  </div>
+                  <div className="font-bold text-red-800">1680 HKD</div>
+                </div>
+              </label>
+            </div>
+            <div className="relative justify-self-center">
+              <input type="radio" id="event" name="package" value="Event Package"
+                     onChange={(e) => setServiceType(e.target.value)}
+                     className="hidden peer"/>
+              <label
+                className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                htmlFor="event">
+                <div className="flex flex-row justify-between items-center w-[380px]">
+                  <div>
+                    <div className="text-red-800 font-bold">Event Package</div>
+                    <div className="text-red-800 text-opacity-40 text-sm">All-in-one Photography Package</div>
+                  </div>
+                  <div className="font-bold text-red-800">980 HKD/HR</div>
+                </div>
+              </label>
+            </div>
             <div className="place-self-center">
               <div className="">
                 <div className="text-red-800 opacity-80 m-2">
