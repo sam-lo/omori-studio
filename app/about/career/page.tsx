@@ -12,8 +12,8 @@ export default function Career() {
             explore the world of wonder
           </div>
         </div>
-        <Equal />
-        <Diversity />
+        <Equal/>
+        <Diversity/>
       </div>
     </>
   )
@@ -49,7 +49,8 @@ function Diversity() {
           </div>
         </div>
         <div className="flex text-xl text-center opacity-80">
-          We believe that a diverse workforce is essential for innovation and success. We strive to create an inclusive environment where everyone feels valued and respected.
+          We believe that a diverse workforce is essential for innovation and success. We strive to create an inclusive
+          environment where everyone feels valued and respected.
         </div>
       </div>
     </div>

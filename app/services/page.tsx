@@ -35,7 +35,7 @@ export default function Services() {
             Cannot find the plan that fits you?
           </div>
           <a
-            href="/"
+            href="https://wa.me/+85255460314"
             className="flex w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-4 py-2 rounded-full ease-in-out transition duration-300">
             <PencilSquareIcon className="h-8"/>
             <div>
