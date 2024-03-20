@@ -4,6 +4,7 @@ import {
   PaperAirplaneIcon, PlusCircleIcon
 } from "@heroicons/react/24/outline";
 import {useState} from "react";
+import moment from "moment";
 
 export default function BookingForm() {
 
@@ -24,6 +25,9 @@ export default function BookingForm() {
 
   const [error, setError] = useState([]);
 
+  const date = moment().format("MMMM DD YYYY");
+  const time = moment().format("HH mm ss");
+
   function handleAddHour() {
     if (Number(hour) < 12) {
       setHour(String(Number(hour) + 1))
@@ -39,6 +43,8 @@ export default function BookingForm() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
+    console.log("Date:", date)
+    console.log("Time:", time)
     console.log("Service Type", serviceType)
     console.log("Hour:", hour)
     console.log("Full name:", fullName)
@@ -47,6 +53,7 @@ export default function BookingForm() {
     console.log("Makeup", makeup)
     console.log("BTS", bts)
     console.log("Extra", extra)
+    console.log("island", extra)
 
     const res = await fetch("/api/booking", {
       method: "POST",
@@ -54,6 +61,8 @@ export default function BookingForm() {
         "Content-type": "application/json"
       },
       body: JSON.stringify({
+        date,
+        time,
         serviceType,
         hour,
         fullName,
@@ -79,6 +88,8 @@ export default function BookingForm() {
           <div className="text-red-900 text-4xl font-serif">
             Service Booking
           </div>
+          {date}
+          {time}
           <div className="text-center">
             <div className="text-xl text-red-800 opacity-80">
               A Email will be sent to guide you for further action.

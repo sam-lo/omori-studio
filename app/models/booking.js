@@ -1,6 +1,17 @@
 import mongoose, { Schema } from "mongoose"
 
 const bookingSchema = new Schema({
+
+    date: {
+        type: String,
+        required:[true, "date is required"]
+    },
+
+    time: {
+        type: String,
+        required:[true, "date is required"]
+    },
+
     serviceType: {
         type: String,
         required:[true, "Service Type is required."]
