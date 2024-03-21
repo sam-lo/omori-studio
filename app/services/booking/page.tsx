@@ -3,7 +3,7 @@ import {
   ClipboardDocumentListIcon, MinusCircleIcon,
   PaperAirplaneIcon, PlusCircleIcon
 } from "@heroicons/react/24/outline";
-import {useState} from "react";
+import { useState } from "react";
 import moment from "moment";
 
 export default function BookingForm() {
@@ -41,6 +41,7 @@ export default function BookingForm() {
   }
 
   const handleSubmit = async (e: any) => {
+
     e.preventDefault();
 
     console.log("Date:", date)
@@ -79,6 +80,7 @@ export default function BookingForm() {
     setError(msg);
 
     console.log(error);
+
   }
 
   return (
@@ -88,8 +90,6 @@ export default function BookingForm() {
           <div className="text-red-900 text-4xl font-serif">
             Service Booking
           </div>
-          {date}
-          {time}
           <div className="text-center">
             <div className="text-xl text-red-800 opacity-80">
               A Email will be sent to guide you for further action.

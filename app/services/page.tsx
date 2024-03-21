@@ -18,7 +18,7 @@ export default function Services() {
             Are you working on a non-profit project?
           </div>
           <a
-            href="/services"
+            href="/service"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-900 hover:text-white hover:shadow-lg hover:shadow-red-300 px-4 py-2 rounded-3xl ease-in-out transition duration-300">
             <HandThumbUpIcon className="h-8 stroke-2"/>
             <div>
