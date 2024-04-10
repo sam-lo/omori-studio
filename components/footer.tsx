@@ -1,4 +1,12 @@
-import {BuildingLibraryIcon, CubeIcon, InformationCircleIcon, UserGroupIcon} from "@heroicons/react/24/outline";
+"use client"
+import {
+  BuildingLibraryIcon,
+  CubeIcon,
+  InformationCircleIcon,
+  UserGroupIcon,
+  ChevronUpIcon
+} from "@heroicons/react/24/outline";
+import {Disclosure} from "@headlessui/react";
 
 export default function Footer() {
   return (
@@ -14,6 +22,7 @@ export default function Footer() {
           © 2024 OMORI STUDIO. All rights reserved.
         </div>
       </div>
+      <MobileAccordion/>
     </>
   )
 }
@@ -117,6 +126,137 @@ function CollaborationsSession() {
       <a href="/maintenance">
         Join Partnership
       </a>
+    </div>
+  )
+}
+
+function MobileAccordion() {
+  return (
+    <div className="w-full px-4 pb-8 block sm:hidden">
+      <Disclosure>
+        {({open}) => (
+          <>
+            <Disclosure.Button
+              className="flex w-full justify-between items-center rounded-xl pr-4 pl-4 py-3 text-left text-lg font-medium text-red-800 focus:outline-none focus-visible:ring focus-visible:ring-red-500/75">
+              <span>Service</span>
+              <ChevronUpIcon
+                className={`${
+                  open ? 'rotate-180 transform' : ''
+                } h-5 w-5 text-red-800`}
+              />
+            </Disclosure.Button>
+            <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
+              <div className="flex flex-col space-y-3">
+                <a href="/services">
+                  Still Photography
+                </a>
+                <a href="/services">
+                  Event Package
+                </a>
+                <a href="/services">
+                  Business Quotation
+                </a>
+                <a href="/services">
+                  Non-Profit Project
+                </a>
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
+      <Disclosure>
+        {({open}) => (
+          <>
+            <Disclosure.Button
+              className="flex w-full justify-between items-center rounded-xl pr-4 pl-4 py-3 text-left text-lg font-medium text-red-800 focus:outline-none focus-visible:ring focus-visible:ring-red-500/75">
+              <span>Gallery</span>
+              <ChevronUpIcon
+                className={`${
+                  open ? 'rotate-180 transform' : ''
+                } h-5 w-5 text-red-800`}
+              />
+            </Disclosure.Button>
+            <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
+              <div className="flex flex-col space-y-3">
+                <a href="/gallery">
+                  Musical Concerts
+                </a>
+                <a href="/gallery">
+                  Pre-Wedding & Big-Day
+                </a>
+                <a href="/gallery">
+                  Fine-Art Portraits
+                </a>
+                <a href="/gallery">
+                  Business Event
+                </a>
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
+      <Disclosure>
+        {({open}) => (
+          <>
+            <Disclosure.Button
+              className="flex w-full justify-between items-center rounded-xl pr-4 pl-4 py-3 text-left text-lg font-medium text-red-800 focus:outline-none focus-visible:ring focus-visible:ring-red-500/75">
+              <span>About Us</span>
+              <ChevronUpIcon
+                className={`${
+                  open ? 'rotate-180 transform' : ''
+                } h-5 w-5 text-red-800`}
+              />
+            </Disclosure.Button>
+            <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
+              <div className="flex flex-col space-y-3">
+                <a href="/maintenance">
+                  Download Resource
+                </a>
+                <a href="/maintenance">
+                  Press Release
+                </a>
+                <a href="/about/contact">
+                  Contact Us
+                </a>
+                <a href="/about/career">
+                  Join Omri Studio
+                </a>
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
+      <Disclosure>
+        {({open}) => (
+          <>
+            <Disclosure.Button
+              className="flex w-full justify-between items-center rounded-xl pr-4 pl-4 py-3 text-left text-lg font-medium text-red-800 focus:outline-none focus-visible:ring focus-visible:ring-red-500/75">
+              <span>Collaborations</span>
+              <ChevronUpIcon
+                className={`${
+                  open ? 'rotate-180 transform' : ''
+                } h-5 w-5 text-red-800`}
+              />
+            </Disclosure.Button>
+            <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
+              <div className="flex flex-col space-y-3">
+                <a href="/maintenance">
+                  Our Partners
+                </a>
+                <a href="/maintenance">
+                  How it works
+                </a>
+                <a href="/maintenance">
+                  Partners Review
+                </a>
+                <a href="/maintenance">
+                  Join Partnership
+                </a>
+              </div>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
     </div>
   )
 }
