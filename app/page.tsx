@@ -14,7 +14,7 @@ import * as React from "react";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center space-y-8 sm:py-24 py-14 selection:bg-red-200">
+      <div className="flex flex-col items-center justify-center space-y-8 sm:py-24 py-8 selection:bg-red-200">
         <div className="flex flex-col items-center space-y-2 sm:hidden text-6xl font-serif text-red-900">
         <div>
           OMORI

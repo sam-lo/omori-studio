@@ -21,6 +21,11 @@ export default function Header() {
     {name: "Collaborations", description: "Join us as one of our partners", href: "/maintenance", icon: UserGroupIcon},
   ]
 
+  const actionItem = [
+    {name: "Language", href: "/maintenance", icon: LanguageIcon},
+    {name: "Sign-in", href: "/maintenance", icon: ArrowLeftEndOnRectangleIcon}
+  ]
+
   return (
     <>
       <div className="relative flex text-sm items-center justify-between my-3 lg:my-6 px-4 lg:px-12 selection:bg-red-200">
@@ -96,9 +101,9 @@ export default function Header() {
             <Popover.Panel className="absolute inset-x-0 right-0 z-10 mt-5 flex w-screen max-w-max px-4">
               <div
                 className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
+                <div className="px-4 py-2">
                   {menusItem.map((item) => (
-                    <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                    <div key={item.name} className="group relative flex gap-x-6 rounded-lg py-2 hover:bg-gray-50">
                       <div
                         className="mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-red-50 group-hover:bg-red-400 transition duration-300 ease-in-out">
                         <item.icon className="h-7 w-7 text-red-800 group-hover:text-white" aria-hidden="true"/>
@@ -110,6 +115,18 @@ export default function Header() {
                         <p className="text-red-800 opacity-80">{item.description}</p>
                       </div>
                     </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-2 divide-x divide-red-50">
+                  {actionItem.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-red-800"
+                    >
+                      <item.icon className="h-5 w-5 flex-none text-red-800" aria-hidden="true"/>
+                      {item.name}
+                    </a>
                   ))}
                 </div>
               </div>
