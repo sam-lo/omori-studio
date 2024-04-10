@@ -30,26 +30,23 @@ export default function Home() {
           Stretch Your Every Precious Moment
         </div>
         <TypeOfService/>
-        <div className="sm:px-24 px-10 pt-12 sm:pt-28 flex flex-col sm:flex-row items-center text-center sm:text-left justify-center gap-16">
+        <div className="sm:px-24 px-10 sm:pt-28 flex flex-col sm:flex-row items-center text-left justify-center gap-16">
           <Image src={Hebie} alt={"Hebie"}
                  className="sm:w-5/12 rounded-3xl shadow-xl shadow-red-100 hover:scale-105 transition ease-in-out duration-700"/>
-          <div className="flex-col  space-y-6">
-            <div className="flex flex-col space-y-2">
-              <div className="text-2xl font-serif text-red-900">
-                From Photography, Videography to Graphical Design,
+          <div className="flex-col space-y-6">
+            <div className="flex flex-col space-y-4 sm:items-start items-center text-center sm:text-left">
+              <div className="text-xl font-serif text-red-900 sm:w-11/12">
+                From Photography, Videography to Graphical Design, a streamlined service that you can count on.
               </div>
-              <div className="text-2xl font-serif text-red-950">
-                A streamlined service that you can count on.
-              </div>
+                <a
+                  href="/services"
+                  className="flex px-3 group w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 rounded-full ease-in-out transition-all duration-300">
+                  <CubeIcon className="h-8"/>
+                  <div className="py-3">
+                    Find your plan
+                  </div>
+                </a>
             </div>
-            <a
-              href="/services"
-              className="flex group w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 px-4 rounded-full ease-in-out transition-all duration-300">
-              <CubeIcon className="h-10"/>
-              <div className="py-4">
-                Find your plan
-              </div>
-            </a>
           </div>
         </div>
       </div>
