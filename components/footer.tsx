@@ -3,7 +3,7 @@ import {BuildingLibraryIcon, CubeIcon, InformationCircleIcon, UserGroupIcon} fro
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-col gap-8 mb-2 mt-16 mx-16 selection:bg-red-200">
+      <div className="hidden lg:flex flex-col gap-8 mb-2 mt-16 mx-16 selection:bg-red-200">
         <div className="flex flex-wrap justify-center gap-16">
           <ServiceSession/>
           <GallerySession/>
@@ -53,16 +53,16 @@ function GallerySession() {
           Gallery
         </div>
       </a>
-      <a href="/maintenance">
+      <a href="/gallery">
         Musical Concerts
       </a>
-      <a href="/maintenance">
+      <a href="/gallery">
         Pre-Wedding & Big-Day
       </a>
-      <a href="/maintenance">
+      <a href="/gallery">
         Fine-Art Portraits
       </a>
-      <a href="/maintenance">
+      <a href="/gallery">
         Business Event
       </a>
     </div>

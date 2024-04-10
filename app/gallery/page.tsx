@@ -2,12 +2,12 @@ export default function Gallery() {
   return (
     <>
       <div>
-        <div className="flex flex-col items-center justify-center space-y-4 px-24 selection:bg-red-200">
+        <div className="flex flex-col items-center justify-center space-y-4 px-24 pt-16 selection:bg-red-200">
           <div className="text-4xl font-serif text-red-900">
-            All good memory should be preserved
+            Our Project Gallery
           </div>
           <div className="text-2xl font-serif text-red-900 opacity-80">
-            Let us freeze that precious moment for you
+            See some of our past projects
           </div>
         </div>
       </div>
