@@ -14,16 +14,8 @@ import * as React from "react";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center space-y-8 sm:py-24 py-8 selection:bg-red-200">
-        <div className="flex flex-col items-center space-y-2 sm:hidden text-6xl font-serif text-red-900">
-        <div>
-          OMORI
-        </div>
-        <div>
-          STUDIO
-        </div>
-        </div>
-        <div className="hidden sm:block text-7xl font-serif text-red-900">
+      <div className="flex flex-col items-center justify-center space-y-6 sm:py-24 py-10 selection:bg-red-200">
+        <div className="text-5xl sm:text-7xl font-serif text-red-800">
           OMORI STUDIO
         </div>
         <div className="text-xl font-serif text-red-900">
@@ -40,9 +32,9 @@ export default function Home() {
               </div>
                 <a
                   href="/services"
-                  className="flex px-3 group w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 rounded-full ease-in-out transition-all duration-300">
+                  className="flex px-3 group w-fit items-center space-x-2 hover:bg-red-400 outline outline-2 outline-red-400 text-xl font-medium text-red-600 hover:text-white hover:shadow-lg hover:shadow-red-200 rounded-2xl ease-in-out transition-all duration-300">
                   <CubeIcon className="h-8"/>
-                  <div className="py-3">
+                  <div className="py-3 font-serif">
                     Find your plan
                   </div>
                 </a>

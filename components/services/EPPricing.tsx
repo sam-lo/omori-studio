@@ -12,7 +12,7 @@ import BookingButton from "@/components/services/BookingButton";
 export default function EPPricing() {
   return (
     <div
-      className="flex flex-col space-y-2 p-12 bg-white rounded-3xl shadow-2xl shadow-red-200 hover:scale-[1.02] transition ease-in-out duration-700">
+      className="flex flex-col space-y-2 p-10 sm:p-12 bg-white rounded-3xl shadow-2xl shadow-red-200 sm:hover:scale-[1.02] transition ease-in-out duration-700">
       <div className="flex items-center space-x-2 font-serif text-2xl text-red-900 pb-4">
         <VideoCameraIcon className="h-9"/>
         <div>
