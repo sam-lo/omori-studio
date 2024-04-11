@@ -27,10 +27,10 @@ export default function AboutUs() {
           </div>
           <QuestionMarkCircleIcon className="sm:h-12 h-8"/>
         </div>
-        <div className="flex justify-center -translate-x-2 sm:-translate-x-0 font-serif items-start gap-4 sm:flex-row sm:flex-wrap flex-col text-red-800">
+        <div className="flex justify-center -translate-x-2 sm:-translate-x-0 font-serif items-start gap-2 sm:gap-4 sm:flex-row sm:flex-wrap flex-col text-red-800">
           <a
             href="/maintenance"
-            className="flex sm:flex-col gap-3 items-center justify-center sm:px-12 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
+            className="flex sm:flex-col gap-3 items-center justify-center px-6 py-3 sm:px-12 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
             <CloudArrowDownIcon className="sm:h-12 h-10"/>
             <div className="text-2xl">
               Resources
@@ -38,7 +38,7 @@ export default function AboutUs() {
           </a>
           <a
             href="/maintenance"
-            className="flex sm:flex-col gap-3 items-center justify-center sm:px-12 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
+            className="flex sm:flex-col gap-3 items-center justify-center px-6 py-3 sm:px-12 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
             <NewspaperIcon className="sm:h-12 h-10"/>
             <div className="text-2xl">
               Press Release
@@ -46,7 +46,7 @@ export default function AboutUs() {
           </a>
           <a
             href="/about/contact"
-            className="flex sm:flex-col gap-3 items-center justify-center sm:px-12 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
+            className="flex sm:flex-col gap-3 items-center justify-center px-6 py-3 sm:px-12 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
             <ChatBubbleOvalLeftEllipsisIcon className="sm:h-12 h-10"/>
             <div className="text-2xl">
               Contact Us
@@ -54,7 +54,7 @@ export default function AboutUs() {
           </a>
           <a
             href="/about/career"
-            className="flex sm:flex-col gap-3 items-center justify-center sm:px-14 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
+            className="flex sm:flex-col gap-3 items-center justify-center px-6 py-3 sm:px-14 sm:py-6 rounded-full hover:bg-red-100 bg-opacity-80 transition duration-300">
             <UserPlusIcon className="sm:h-12 h-10"/>
             <div className="text-2xl">
               Join Omori

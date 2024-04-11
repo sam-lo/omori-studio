@@ -3,16 +3,16 @@ import {EnvelopeIcon, PaperAirplaneIcon} from "@heroicons/react/24/outline";
 export default function Page() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center space-y-6 p-24 selection:bg-red-200">
+      <div className="flex flex-col items-center justify-center sm:gap-4 sm:p-24 p-10 selection:bg-red-200">
         <div className="flex flex-col items-center justify-center space-y-4">
-          <div className="text-4xl font-serif text-red-900">
+          <div className="text-3xl sm:text-4xl font-serif text-red-900">
             Encountered trouble or confused of our services?
           </div>
-          <div className="text-3xl font-serif text-red-800">
+          <div className="text-2xl sm:text-3xl font-serif text-red-800">
             Feel free to contact us for supports
           </div>
         </div>
-        <div className="flex flex-wrap gap-4 py-12">
+        <div className="flex flex-wrap sm:flex-row flex-col gap-4 py-12">
           <MailButton/>
           <InstagramButton/>
           <WhatsAppButton />

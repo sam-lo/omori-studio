@@ -15,7 +15,7 @@ export default function Services() {
         <div className="hidden sm:block text-red-900 opacity-60 font-serif text-xl">
           Start by picking the type of service you want
         </div>
-        <div className="flex gap-2 sm:gap-4 sm:flex-row flex-col items-center text-red-900 text-xl font-serif my-4">
+        <div className="flex gap-2 sm:gap-4 sm:flex-row flex-col items-center text-red-900 text-xl font-serif mt-4">
           <div className="opacity-80 text-center">
             Working on a non-profit project?
           </div>
@@ -35,7 +35,7 @@ export default function Services() {
         <div className="block sm:hidden sm:py-12 pb-8">
           <Tab.Group>
             <Tab.List className="flex justify-evenly gap-1 rounded-xl p-3 font-serif text-lg text-red-900">
-              <Tab className="bg-red-100/95 px-4 py-3 rounded-2xl">Still Photography</Tab>
+              <Tab className="bg-red-100/95 px-4 py-3 rounded-2xl">Photography</Tab>
               <Tab className="bg-red-100/95 px-4 py-3 rounded-2xl">Event Package</Tab>
             </Tab.List>
             <Tab.Panels>

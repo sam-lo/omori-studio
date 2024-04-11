@@ -86,28 +86,26 @@ export default function BookingForm() {
   return (
     <>
       <form>
-        <div className="flex flex-col items-center gap-6 py-24 selection:bg-red-200">
+        <div className="flex flex-col items-center gap-6 sm:p-24 p-5 selection:bg-red-200">
           <div className="text-red-900 text-4xl font-serif">
             Service Booking
           </div>
           <div className="text-center">
-            <div className="text-xl text-red-800 opacity-80">
-              A Email will be sent to guide you for further action.
+            <div className="text-lg sm:text-xl text-red-800 opacity-80">
+              An Email will be sent for further action.
             </div>
-            <div className="text-xl text-red-800 opacity-80">
-              Official invoice will be delivered by email.
-            </div>
-          </div>
-          <div className="flex flex-col text-center items-center text-red-900 opacity-60">
-            {(serviceType !== "") ? <div className="text-xl font-semibold">
-              You are booking for {serviceType} service.
-            </div> : null}
-            <div className="text-xl">
-              All your data is safely stored in European Union member country.
+            <div className="text-lg sm:text-xl text-red-800 opacity-80">
+              Invoice will be delivered by email.
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 justify-items-start py-8">
-            <div className="text-red-800 text-opacity-80 px-6 translate-y-2">
+          <div className="flex flex-col text-center items-center text-xl opacity-60 text-red-900">
+              All your data is safely stored in European Union member country server.
+          </div>
+          {(serviceType !== "") ? <div className="text-xl text-red-800 font-semibold">
+            You are booking for {serviceType}.
+          </div> : null}
+          <div className="grid grid-cols-1 gap-4 justify-items-start pb-8">
+            <div className="text-red-800 text-opacity-80 sm:px-6 translate-y-2">
               Choose your desired plan
             </div>
             <div className="relative justify-self-center hover:scale-[1.02] transition-all duration-500">
@@ -170,7 +168,7 @@ export default function BookingForm() {
                        id="name"
                        onChange={(e) => setFullName(e.target.value)}
                        value={fullName}
-                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. Leonardo da Vinci"/>
               </div>
               <div className="">
@@ -181,7 +179,7 @@ export default function BookingForm() {
                        id="phone"
                        onChange={(e) => setPhoneNumber(e.target.value)}
                        value={phoneNumber}
-                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. 9 8 7 6 - 5 4 3 2"
                        maxLength={8}
                        inputMode="numeric"/>
@@ -194,7 +192,7 @@ export default function BookingForm() {
                        id="name"
                        onChange={(e) => setEmail(e.target.value)}
                        value={email}
-                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-2xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. leonardo@example.com"/>
               </div>
             </div>
@@ -236,7 +234,7 @@ export default function BookingForm() {
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                     <div>
                       <div className="text-red-800 font-bold">Behind the scene</div>
-                      <div className="text-red-800 text-opacity-40 text-sm">Include a video during shooting</div>
+                      <div className="text-red-800 text-opacity-40 text-sm">Include an extra video</div>
                     </div>
                     <div className="font-bold text-red-800">+480 HKD</div>
                   </div>
@@ -276,14 +274,14 @@ export default function BookingForm() {
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                     <div>
                       <div className="text-red-800 font-bold">Island District</div>
-                      <div className="text-red-800 text-opacity-40 text-sm">Service charge for Island District</div>
+                      <div className="text-red-800 text-opacity-40 text-sm">Charge for Island District</div>
                     </div>
                     <div className="font-bold text-red-800">+120 HKD</div>
                   </div>
                 </label>
               </div>
             </div>
-            <div className="justify-self-center text-3xl text-red-800 transition-all duration-300 font-serif">
+            <div className="justify-self-center text-center text-3xl text-red-800 transition-all duration-300 font-serif">
               Estimated Total Cost: {estimatedCost} HKD
             </div>
           </div>
@@ -296,7 +294,7 @@ export default function BookingForm() {
                 <ClipboardDocumentListIcon className="h-8"/>
               </div>
               <div className="text-2xl font-serif group-hover:-translate-x-10 duration-300 ease-in-out">
-                Submit!
+                {isValidated ? 'Invalid' : 'Submit'}
               </div>
               <PaperAirplaneIcon
                 className="h-8 opacity-0 group-hover:-translate-x-9 group-hover:opacity-100 transition duration-500 ease-in-out"/>

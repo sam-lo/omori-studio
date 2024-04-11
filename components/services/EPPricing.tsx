@@ -65,10 +65,10 @@ export default function EPPricing() {
               30-Day High-Speed Cloud Access
             </li>
             <li>
-              30-sec ~ 8-min Video Post-Production
+              ≤ 15-min Video Post-Production"
             </li>
             <li>
-              All Photos will be returned within 7 Days
+              Photos returned within 7 Days
             </li>
           </ul>
         </div>
@@ -95,16 +95,19 @@ export default function EPPricing() {
               Extra 20 Finely Tuned Photo (+120HKD)
             </li>
             <li>
-              Extend Video Duration (+280HKD / min)
+              Extend Video Duration (+280HKD/min)
             </li>
           </ul>
         </div>
         <div className="flex flex-col space-y-2">
           <div className="text-red-800 opacity-60">
-            #Booking at minimum of 2 hours
+            # Booking at minimum of 2 hours
           </div>
           <div className="text-red-800 opacity-60">
-            ^For every session
+            ^ For every session
+          </div>
+          <div className="text-red-800 opacity-60">
+            " Sufficient material is required
           </div>
         </div>
       </div>
