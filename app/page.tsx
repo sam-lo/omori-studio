@@ -22,7 +22,7 @@ export default function Home() {
           Stretch Your Every Precious Moment
         </div>
         <TypeOfService/>
-        <div className="sm:px-24 px-10 sm:pt-28 flex flex-col sm:flex-row items-center text-left justify-center gap-16">
+        <div className="sm:px-24 px-8 sm:pt-28 flex flex-col sm:flex-row items-center text-left justify-center gap-16">
           <Image src={Hebie} alt={"Hebie"}
                  className="sm:w-5/12 rounded-3xl shadow-xl shadow-red-100 hover:scale-105 transition ease-in-out duration-700"/>
           <div className="flex-col space-y-6">

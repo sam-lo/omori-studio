@@ -37,12 +37,12 @@ export default function EPPricing() {
           Party / Banquet
         </div>
       </div>
-      <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
+      <div className="text-2xl sm:text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         9 8 0 H K D / H R
       </div>
       <BookingButton text={"/services/booking"}/>
       <div className="flex-col space-y-8 pt-8">
-        <div className="flex flex-col space-y-4 h-56">
+        <div className="flex flex-col space-y-4 sm:h-56">
           <div className="text-lg text-red-900 font-serif">
             <div className="flex items-center space-x-2 -translate-x-3">
               <CheckBadgeIcon className="h-8"/>

@@ -103,18 +103,18 @@ export default function Header() {
                 className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                 <div className="px-4 py-2">
                   {menusItem.map((item) => (
-                    <div key={item.name} className="group relative flex gap-x-6 rounded-lg py-2 hover:bg-gray-50">
+                    <a href={item.href} key={item.name} className="group relative flex gap-x-6 rounded-lg py-2 hover:bg-gray-50">
                       <div
                         className="mt-1 flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-red-50 group-hover:bg-red-400 transition duration-300 ease-in-out">
                         <item.icon className="h-7 w-7 text-red-800 group-hover:text-white" aria-hidden="true"/>
                       </div>
                       <div>
-                        <a href={item.href} className="font-semibold text-lg text-red-900">
+                        <p className="font-semibold text-lg text-red-900">
                           {item.name}
-                        </a>
+                        </p>
                         <p className="text-red-800 opacity-80">{item.description}</p>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-red-50">

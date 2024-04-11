@@ -37,7 +37,7 @@ export default function SPPricing() {
           Pre-Wedding
         </div>
       </div>
-      <div className="text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
+      <div className="text-2xl sm:text-3xl text-red-900 font-serif font-bold tracking-widest py-6">
         1 6 8 0 H K D
       </div>
       <BookingButton text={"/services/booking"}/>
