@@ -11,7 +11,7 @@ import {Disclosure} from "@headlessui/react";
 export default function Footer() {
   return (
     <>
-      <div className="hidden lg:flex flex-col gap-8 mb-2 mt-16 mx-16 selection:bg-red-200">
+      <div className="hidden sm:flex flex-col gap-8 mb-2 mt-16 mx-16 selection:bg-red-200">
         <div className="flex flex-wrap justify-center gap-16">
           <ServiceSession/>
           <GallerySession/>

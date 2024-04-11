@@ -65,7 +65,7 @@ export default function SPPricing() {
               30-Day High-Speed Cloud Access
             </li>
             <li>
-              All Photo will be returned within 5 days
+              Photos returned within 5 days
             </li>
           </ul>
         </div>
