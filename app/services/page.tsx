@@ -16,7 +16,7 @@ export default function Services() {
           Start by picking the type of service you want
         </div>
         <div className="flex gap-1 sm:gap-4 sm:flex-row flex-col items-center text-red-900 text-xl font-serif my-4">
-          <div className="opacity-80">
+          <div className="opacity-80 text-center">
             Are you working on a non-profit project?
           </div>
           <a
