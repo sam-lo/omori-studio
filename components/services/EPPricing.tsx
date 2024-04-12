@@ -65,7 +65,7 @@ export default function EPPricing() {
               30-Day High-Speed Cloud Access
             </li>
             <li>
-              ≤ 15-min Video Post-Production"
+              ≤ 15-min Video Post-Production`
             </li>
             <li>
               Photos returned within 7 Days
@@ -107,7 +107,7 @@ export default function EPPricing() {
             ^ For every session
           </div>
           <div className="text-red-800 opacity-60">
-            " Sufficient material is required
+            ` Sufficient material is required
           </div>
         </div>
       </div>
