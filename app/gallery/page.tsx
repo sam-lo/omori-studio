@@ -1,4 +1,5 @@
 export default function Gallery() {
+
   return (
     <>
       <div>
@@ -11,13 +12,7 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-      <AdobePortfolio />
+      <iframe className=" my-8 px-2 flex w-full h-screen" src="https://omorigallery.myportfolio.com/"/>
     </>
-  )
-}
-
-function AdobePortfolio() {
-  return (
-    <iframe className="my-8 px-2 flex w-full h-screen" src="https://omorigallery.myportfolio.com/" />
   )
 }
