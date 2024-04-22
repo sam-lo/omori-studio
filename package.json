@@ -14,6 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@realm/react": "^0.6.2",
     "@uidotdev/usehooks": "^2.4.1",
     "framer-motion": "^11.0.14",
     "i18next": "^23.11.1",
@@ -27,7 +28,10 @@
     "react-aria-components": "^1.1.1",
     "react-dom": "^18",
     "react-hook-form": "^7.51.0",
-    "react-i18next": "^14.1.0"
+    "react-i18next": "^14.1.0",
+    "react-router-dom": "^6.22.3",
+    "realm": "^12.7.0",
+    "realm-web": "^2.0.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

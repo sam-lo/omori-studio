@@ -22,8 +22,8 @@ export default function Header() {
   ]
 
   const actionItem = [
-    {name: "Language", href: "/maintenance", icon: LanguageIcon},
-    {name: "Sign-in", href: "/maintenance", icon: ArrowLeftEndOnRectangleIcon}
+    {name: "Language", href: "/construction", icon: LanguageIcon},
+    {name: "Log On", href: "/construction", icon: ArrowLeftEndOnRectangleIcon}
   ]
 
   return (
@@ -72,12 +72,13 @@ export default function Header() {
           </a>
         </div>
         <div className="hidden lg:flex items-center space-x-2">
-          <div
+          <a
+            href="/construction"
             className="hover:bg-red-400 text-red-800 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <LanguageIcon className="h-6"/>
-          </div>
+          </a>
           <a
-            href="/maintenance"
+            href="/construction"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-800 hover:text-white font-bold hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <div>
               Sign in
@@ -98,7 +99,7 @@ export default function Header() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute inset-x-0 right-0 z-10 mt-5 flex w-screen max-w-max px-4">
+            <Popover.Panel className="absolute inset-x-0 z-10 mt-5 flex w-screen max-w-max px-4">
               <div
                 className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                 <div className="px-4 py-2">

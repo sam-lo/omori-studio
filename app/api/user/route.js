@@ -1,14 +1,28 @@
 import connectDB from "../../lib/mongodb";
-import Booking from "../../models/booking";
+import User from "../../models/user";
 import {NextResponse} from "next/server";
 import mongoose from "mongoose";
 
 export async function POST(req) {
-    const {date, time, serviceType, hour, fullName, phoneNumber, email, makeup, bts, extra, island} = await req.json();
+    const {
+        username,
+        password,
+        email,
+        fullName,
+        phoneNumber,
+        agreeToPolicy,
+    } = await req.json();
 
     try {
         await connectDB();
-        await Booking.create({date, time, serviceType, hour, fullName, phoneNumber, email, makeup, bts, extra, island});
+        await User.create({
+            username,
+            password,
+            email,
+            fullName,
+            phoneNumber,
+            agreeToPolicy,
+        });
 
         return NextResponse.json({
             msg: ["Message sent successfully"],

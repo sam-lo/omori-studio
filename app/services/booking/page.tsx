@@ -98,8 +98,16 @@ export default function BookingForm() {
               Invoice will be delivered by email.
             </div>
           </div>
-          <div className="flex flex-col text-center items-center text-xl opacity-60 text-red-900">
-              All your data is safely stored in European Union member country server.
+          <div>
+            <div className="text-center text-lg sm:text-2xl text-red-800 opacity-80 font-serif">
+              Access all our services with one account
+            </div>
+            <div className="flex flex-col text-center items-center text-lg opacity-60 text-red-900">
+              We uses server located in European Union member country.
+            </div>
+            <div className="flex flex-col text-center items-center text-lg opacity-60 text-red-900">
+              Your privacy is our priority concern.
+            </div>
           </div>
           {(serviceType !== "") ? <div className="text-xl text-red-800 font-semibold">
             You are booking for {serviceType}.

@@ -50,7 +50,7 @@ export default function Services() {
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-8">
           <div className="text-red-900 text-center opacity-60 text-2xl font-serif">
-            Cannot find the plan that fits you?
+            Can't find a suitable plan?
           </div>
           <a
             href="https://wa.me/+85255460314"
