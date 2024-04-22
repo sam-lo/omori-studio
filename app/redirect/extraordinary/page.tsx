@@ -8,7 +8,7 @@ export default function Extraordinary() {
         <div className="flex flex-col justify-center items-center gap-2 sm:gap-4">
           <FilmIcon className="text-red-900 h-24 my-4"/>
           <div className="sm:text-4xl text-3xl text-center text-red-900 font-serif">
-            You are about to be redirected to "Extraordinary"
+            You are about to be redirected to : Extraordinary
           </div>
           <div className="sm:text-3xl text-xl text-center text-red-800 font-serif">
             Use headphone for best experience

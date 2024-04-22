@@ -16,8 +16,6 @@ export default function LogOn() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
-
   }
 
   return (
@@ -81,7 +79,7 @@ export default function LogOn() {
         </button>
         <div className="flex items-center justify-center sm:flex-row flex-col gap-4">
           <div className="text-red-900 text-center opacity-60 text-xl sm:text-2xl font-serif">
-            Don't have an account?
+            Have not created an account yet?
           </div>
           <a
             href="/session/signup"
