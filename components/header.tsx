@@ -23,7 +23,7 @@ export default function Header() {
 
   const actionItem = [
     {name: "Language", href: "/construction", icon: LanguageIcon},
-    {name: "Log On", href: "/session/logon", icon: ArrowLeftEndOnRectangleIcon}
+    {name: "Log On", href: "/construction", icon: ArrowLeftEndOnRectangleIcon}
   ]
 
   return (
