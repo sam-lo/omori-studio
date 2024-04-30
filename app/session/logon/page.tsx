@@ -48,7 +48,7 @@ export default function LogOn() {
                  id="name"
                  onChange={(e) => setUsername(e.target.value)}
                  value={username}
-                 className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                 className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                  placeholder="Enter Username"/>
         </div>
         <div className="place-self-center">
@@ -59,7 +59,7 @@ export default function LogOn() {
                  id="name"
                  onChange={(e) => setPassword(e.target.value)}
                  value={password}
-                 className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                 className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                  placeholder="Enter Password"/>
         </div>
         <button

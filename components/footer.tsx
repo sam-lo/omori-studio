@@ -6,7 +6,7 @@ import {
   UserGroupIcon,
   ChevronUpIcon
 } from "@heroicons/react/24/outline";
-import {Disclosure} from "@headlessui/react";
+import {Disclosure , Transition} from "@headlessui/react";
 
 export default function Footer() {
   return (
@@ -141,10 +141,19 @@ function MobileAccordion() {
               <span>Service</span>
               <ChevronUpIcon
                 className={`${
-                  open ? 'rotate-180 transform' : ''
-                } h-5 w-5 text-red-800`}
+                  open ? 'rotate-180 transform' : 'rotate-360 transform'
+                } h-5 w-5 text-red-800 transition-all duration-300`}
               />
             </Disclosure.Button>
+            <Transition
+              show={open}
+              enter="transition duration-100 ease-out"
+              enterFrom="transform scale-95 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-75 ease-out"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-95 opacity-0"
+            >
             <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
               <div className="flex flex-col space-y-3">
                 <a href="/services">
@@ -161,6 +170,7 @@ function MobileAccordion() {
                 </a>
               </div>
             </Disclosure.Panel>
+            </Transition>
           </>
         )}
       </Disclosure>
@@ -172,8 +182,8 @@ function MobileAccordion() {
               <span>Gallery</span>
               <ChevronUpIcon
                 className={`${
-                  open ? 'rotate-180 transform' : ''
-                } h-5 w-5 text-red-800`}
+                  open ? 'rotate-180 transform' : 'rotate-360 transform'
+                } h-5 w-5 text-red-800 transition-all duration-300`}
               />
             </Disclosure.Button>
             <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
@@ -203,8 +213,8 @@ function MobileAccordion() {
               <span>About Us</span>
               <ChevronUpIcon
                 className={`${
-                  open ? 'rotate-180 transform' : ''
-                } h-5 w-5 text-red-800`}
+                  open ? 'rotate-180 transform' : 'rotate-360 transform'
+                } h-5 w-5 text-red-800 transition-all duration-300`}
               />
             </Disclosure.Button>
             <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">
@@ -234,8 +244,8 @@ function MobileAccordion() {
               <span>Collaborations</span>
               <ChevronUpIcon
                 className={`${
-                  open ? 'rotate-180 transform' : ''
-                } h-5 w-5 text-red-800`}
+                  open ? 'rotate-180 transform' : 'rotate-360 transform'
+                } h-5 w-5 text-red-800 transition-all duration-300`}
               />
             </Disclosure.Button>
             <Disclosure.Panel className="px-4 py-2 text-sm text-red-800">

@@ -1,6 +1,5 @@
 "use client";
 import {useState} from "react";
-import moment from "moment";
 import {ClipboardDocumentListIcon, PaperAirplaneIcon, UserPlusIcon} from "@heroicons/react/24/outline";
 
 export default function SignUp() {
@@ -77,7 +76,7 @@ export default function SignUp() {
                    id="name"
                    onChange={(e) => setFullName(e.target.value)}
                    value={fullName}
-                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                    placeholder="Leonardo da Vinci"/>
           </div>
           <div className="place-self-center">
@@ -88,7 +87,7 @@ export default function SignUp() {
                    id="phone"
                    onChange={(e) => setPhoneNumber(e.target.value)}
                    value={phoneNumber}
-                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                    placeholder="9 8 7 6 - 5 4 3 2"
                    maxLength={8}
                    inputMode="numeric"/>
@@ -101,7 +100,7 @@ export default function SignUp() {
                    id="name"
                    onChange={(e) => setEmail(e.target.value)}
                    value={email}
-                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                    placeholder="leonardo@example.com"/>
           </div>
           <div className="place-self-center">
@@ -112,7 +111,7 @@ export default function SignUp() {
                    id="name"
                    onChange={(e) => setUsername(e.target.value)}
                    value={username}
-                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                    placeholder="leonardo14520415"/>
           </div>
           <div className="place-self-center">
@@ -123,7 +122,7 @@ export default function SignUp() {
                    id="name"
                    onChange={(e) => setPassword(e.target.value)}
                    value={password}
-                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                   className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                    placeholder="iLoveItaly4Ever!"/>
           </div>
           <div className="relative hover:scale-[1.02] transition-all duration-500 my-6">
@@ -134,13 +133,13 @@ export default function SignUp() {
               onChange={(e) => setAgreeToPolicy(e.target.checked)}
             />
             <label
-              className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+              className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
               htmlFor="island"
             >
               <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                 <div>
                   <div className="text-red-800 font-bold">Agreement</div>
-                  <div className="text-red-800 text-opacity-40 text-sm">I agree to Omori Studio policy</div>
+                  <div className="text-red-800 text-opacity-40 text-sm">to Omori Studio policy</div>
                 </div>
                 <div className="font-bold text-red-800">Required</div>
               </div>

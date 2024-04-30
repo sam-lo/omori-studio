@@ -124,12 +124,12 @@ export default function BookingForm() {
                      }}
                      className="hidden peer"/>
               <label
-                className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
                 htmlFor="still">
                 <div className="flex flex-row justify-between items-center w-[380px]">
                   <div>
                     <div className="text-red-800 font-bold">Still Photography</div>
-                    <div className="text-red-800 text-opacity-40 text-sm">All-in-one Photography Package</div>
+                    <div className="text-red-800 text-opacity-40 text-sm">All-in-one Photography</div>
                   </div>
                   <div className="font-bold text-red-800">1680 HKD</div>
                 </div>
@@ -143,12 +143,12 @@ export default function BookingForm() {
                      }}
                      className="hidden peer"/>
               <label
-                className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
                 htmlFor="event">
                 <div className="flex flex-row justify-between items-center w-[380px]">
                   <div>
                     <div className="text-red-800 font-bold">Event Package</div>
-                    <div className="text-red-800 text-opacity-40 text-sm">One-step Photo-Videography</div>
+                    <div className="text-red-800 text-opacity-40 text-sm">Photo-Videography Package</div>
                   </div>
                   <div className="font-bold text-red-800">980 HKD/HR</div>
                 </div>
@@ -157,7 +157,7 @@ export default function BookingForm() {
             {
               (serviceType == "Event Package") ?
                 <div
-                  className="flex bg-red-100 text-3xl bg-opacity-80 p-4 rounded-2xl w-96 text-red-800 font-semibold justify-self-center gap-24 justify-center items-center">
+                  className="flex bg-red-100 text-3xl bg-opacity-80 p-4 rounded-2xl w-80 sm:w-96 text-red-800 font-semibold justify-self-center gap-24 justify-center items-center">
                   <MinusCircleIcon className={"" + "h-12 cursor-pointer hover:scale-[1.02] transition-all duration-500"}
                                    onClick={handleSubtractHour}/>
                   <div className="flex select-none">
@@ -176,7 +176,7 @@ export default function BookingForm() {
                        id="name"
                        onChange={(e) => setFullName(e.target.value)}
                        value={fullName}
-                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. Leonardo da Vinci"/>
               </div>
               <div className="">
@@ -187,7 +187,7 @@ export default function BookingForm() {
                        id="phone"
                        onChange={(e) => setPhoneNumber(e.target.value)}
                        value={phoneNumber}
-                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. 9 8 7 6 - 5 4 3 2"
                        maxLength={8}
                        inputMode="numeric"/>
@@ -200,7 +200,7 @@ export default function BookingForm() {
                        id="name"
                        onChange={(e) => setEmail(e.target.value)}
                        value={email}
-                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
+                       className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. leonardo@example.com"/>
               </div>
             </div>
@@ -216,13 +216,13 @@ export default function BookingForm() {
                   onChange={(e) => setMakeup(e.target.checked)}
                 />
                 <label
-                  className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                  className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
                   htmlFor="makeup"
                 >
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                     <div>
                       <div className="text-red-800 font-bold">Make-up Artist</div>
-                      <div className="text-red-800 text-opacity-40 text-sm">Make-up and Hair-Styling</div>
+                      <div className="text-red-800 text-opacity-40 text-sm">Styling Artist Service</div>
                     </div>
                     <div className="font-bold text-red-800">+480 HKD</div>
                   </div>
@@ -236,7 +236,7 @@ export default function BookingForm() {
                   onChange={(e) => setBTS(e.target.checked)}
                 />
                 <label
-                  className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                  className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
                   htmlFor="bts"
                 >
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
@@ -256,7 +256,7 @@ export default function BookingForm() {
                   onChange={(e) => setExtra(e.target.checked)}
                 />
                 <label
-                  className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                  className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
                   htmlFor="extra"
                 >
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
@@ -276,13 +276,13 @@ export default function BookingForm() {
                   onChange={(e) => setIsland(e.target.checked)}
                 />
                 <label
-                  className="w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
+                  className="w-80 sm:w-96 cursor-pointer flex bg-red-100 bg-opacity-70 peer-checked:bg-opacity-100 flex-row justify-between items-center rounded-2xl p-4 peer-focus:outline-none peer-checked:ring peer-checked:ring-red-800 peer-checked:ring-opacity-40 peer-checked:border-transparent peer-checked:bg-red-100"
                   htmlFor="island"
                 >
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                     <div>
                       <div className="text-red-800 font-bold">Island District</div>
-                      <div className="text-red-800 text-opacity-40 text-sm">Charge for Island District</div>
+                      <div className="text-red-800 text-opacity-40 text-sm">Island District Fee</div>
                     </div>
                     <div className="font-bold text-red-800">+120 HKD</div>
                   </div>

@@ -23,7 +23,7 @@ export default function Header() {
 
   const actionItem = [
     {name: "Language", href: "/construction", icon: LanguageIcon},
-    {name: "Log On", href: "/construction", icon: ArrowLeftEndOnRectangleIcon}
+    {name: "Log On", href: "/session/logon", icon: ArrowLeftEndOnRectangleIcon}
   ]
 
   return (
@@ -78,7 +78,7 @@ export default function Header() {
             <LanguageIcon className="h-6"/>
           </a>
           <a
-            href="/construction"
+            href="/session/logon"
             className="flex items-center space-x-2 hover:bg-red-400 text-red-800 hover:text-white font-bold hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <div>
               Sign in
