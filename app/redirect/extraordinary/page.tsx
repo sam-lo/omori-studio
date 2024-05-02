@@ -3,6 +3,9 @@ import * as React from "react";
 import {PlayIcon} from "@heroicons/react/24/solid";
 
 export default function Extraordinary() {
+
+  let redirectDestination = "https://youtu.be/ahbR5K2MZ1A";
+
   return (
     <>
       <div className="flex flex-col items-center justify-center sm:gap-8 gap-4 sm:p-24 p-10 selection:bg-red-200">
@@ -16,7 +19,7 @@ export default function Extraordinary() {
           </div>
         </div>
         <a
-          href="https://youtu.be/JLukKNYbZIM"
+          href={redirectDestination}
           className="group flex flex-col items-center justify-center space-y-5 outline outline-2 outline-red-400 hover:bg-red-400 rounded-3xl pl-8 py-2">
           <div className="flex items-center justify-center space-x-2 text-red-400 group-hover:text-white">
             <div className="group-hover:opacity-0 transition duration-300 ease-in-out">
@@ -35,7 +38,7 @@ export default function Extraordinary() {
           </div>
           <a
             href="/"
-            className="flex opacity-40 hover:opacity-100 items-center outline outline-2 font-serif outline-red-800 hover:outline-red-400 space-x-2 hover:bg-red-400 text-red-800 hover:text-white font-bold hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
+            className="flex opacity-40 hover:opacity-100 items-center outline outline-2 font-serif outline-red-800 hover:outline-red-400 space-x-2 hover:bg-red-400 text-red-800 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <CameraIcon className="h-6 stroke-2"/>
             <div>
               Omori Studio
