@@ -4,7 +4,7 @@ import {PlayIcon} from "@heroicons/react/24/solid";
 
 export default function Extraordinary() {
 
-  let redirectDestination = "https://youtu.be/ahbR5K2MZ1A";
+  let redirectDestination = "https://youtu.be/C3CjGvIbZV4";
 
   return (
     <>
