@@ -65,7 +65,7 @@ export default function SPPricing() {
               30-Day High-Speed Cloud Access
             </li>
             <li>
-              Photos returned within 5 days
+              Photos returned within 3 days
             </li>
           </ul>
         </div>
@@ -80,13 +80,16 @@ export default function SPPricing() {
           </div>
           <ul className="list-disc list-inside text-red-900 font-serif space-y-2">
             <li>
+              Extra 60-min shooting time (+880HKD)
+            </li>
+            <li>
+              Behind The Scene video (+880HKD)
+            </li>
+            <li>
               Make-Up & Hair-Style Artist (+480HKD)
             </li>
             <li>
-              Islands District Additional fee (+120HKD)
-            </li>
-            <li>
-              Behind The Scene video (+480HKD)
+              Islands District Additional fee (+180HKD)
             </li>
             <li>
               Extra 20 Finely Tuned Photo (+120HKD)

@@ -42,6 +42,10 @@ const bookingSchema = new Schema({
         required: [true, "Email is required."]
     },
 
+    extend: {
+        type: Boolean
+    },
+
     makeup: {
         type:Boolean
     },
