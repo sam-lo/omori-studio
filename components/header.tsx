@@ -74,7 +74,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center space-x-2">
           <a
             href="/construction"
-            className="hover:bg-red-400 text-red-800 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
+            className="hidden hover:bg-red-400 text-red-800 hover:text-white hover:shadow-lg hover:shadow-red-300 px-3 py-2 rounded-3xl ease-in-out transition duration-300">
             <LanguageIcon className="h-6"/>
           </a>
           <a

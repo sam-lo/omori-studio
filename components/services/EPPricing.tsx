@@ -83,19 +83,19 @@ export default function EPPricing() {
           </div>
           <ul className="list-disc list-inside text-red-900 font-serif space-y-2">
             <li>
-              Make-Up & Hair-Style Artist (+240HKD)^
+              Make-Up & Hair-Style Artist (+440HKD)^
             </li>
             <li>
-              Islands District Additional fee (+140HKD)
-            </li>
-            <li>
-              Behind The Scene Video (+480HKD)
-            </li>
-            <li>
-              Extra 20 Finely Tuned Photo (+120HKD)
+              Behind The Scene Video (+880HKD)
             </li>
             <li>
               Extend Video Duration (+280HKD/min)
+            </li>
+            <li>
+              Islands District Additional fee (+180HKD)
+            </li>
+            <li>
+              Extra 20 Finely Tuned Photo (+120HKD)
             </li>
           </ul>
         </div>

@@ -228,7 +228,7 @@ export default function BookingForm() {
                   >
                     <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                       <div>
-                        <div className="text-red-800 font-bold">Extend 60-min shooting</div>
+                        <div className="text-red-800 font-bold">Extend 60 minute</div>
                         <div className="text-red-800 text-opacity-40 text-sm">Total of 180-min service</div>
                       </div>
                       <div className="font-bold text-red-800">+880 HKD</div>
@@ -253,7 +253,7 @@ export default function BookingForm() {
                       <div className="text-red-800 text-opacity-40 text-sm">Styling Artist Service</div>
                     </div>
                     <div
-                      className="font-bold text-red-800">{serviceType == "Event Package" ? "+440 HKD/Hr" : "+880 HKD"}</div>
+                      className="font-bold text-red-800">{serviceType == "Event Package" ? "+440 HKD^" : "+880 HKD"}</div>
                   </div>
                 </label>
               </div>
@@ -317,6 +317,9 @@ export default function BookingForm() {
                   </div>
                 </label>
               </div>
+              {serviceType == "Event Package" ? <div className="text-red-800 opacity-40 mx-2">
+                ^ Calculated Per Hour
+              </div> : null}
             </div>
             <div
               className="justify-self-center text-center text-3xl text-red-800 transition-all duration-300 font-serif">
@@ -325,7 +328,7 @@ export default function BookingForm() {
           </div>
           <button
             onClick={handleSubmit}
-            disabled={isValidated}
+            disabled={true}
             className="disabled:cursor-not-allowed disabled:grayscale group flex flex-col justify-self-center items-center justify-center gap-5 outline outline-2 outline-red-400 hover:bg-red-400 rounded-2xl pl-8 py-2">
             <div className="flex items-center justify-center space-x-2 text-red-400 group-hover:text-white">
               <div className="group-hover:opacity-0 transition duration-300 ease-in-out">
