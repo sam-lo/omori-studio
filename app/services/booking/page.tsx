@@ -3,7 +3,7 @@ import {
   ClipboardDocumentListIcon, MinusCircleIcon,
   PaperAirplaneIcon, PlusCircleIcon
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import {useState} from "react";
 import moment from "moment";
 
 export default function BookingForm() {
@@ -16,14 +16,15 @@ export default function BookingForm() {
   const [bts, setBTS] = useState(false);
   const [extra, setExtra] = useState(false);
   const [island, setIsland] = useState(false);
-  const [hour, setHour] = useState("2");
+  const [hour, setHour] = useState("");
 
   const [serviceType, setServiceType] = useState("")
 
   let isValidated = (serviceType == "" || fullName == "" || phoneNumber.length !== 8 || email == "" || !email.includes("@") || !email.includes(".") || email.length < 5)
 
-  let estimatedCost = (serviceType == "Still Photography" ? 1680 : (Number(hour) * 980)) + (extend ? 880 : 0) + (makeup ? (serviceType == "Event Package" ? (Number(hour) * 440) :880) : 0) + (bts ? 480 : 0) + (extra ? 120 : 0) + (island ? 120 : 0)
+  let estimatedCost = (serviceType == "Still Photography" ? 1680 : (Number(hour) * 980)) + (extend ? 880 : 0) + (makeup ? (serviceType == "Event Package" ? (Number(hour) * 440) : 880) : 0) + (bts ? 480 : 0) + (extra ? 120 : 0) + (island ? 120 : 0)
 
+  let WhatsAppLink = "https://wa.me/85255460314?text=I+would+like+to+have+a+official+quotation+of+"+ (serviceType) + (serviceType == "Event Package" ? "+for+" + hour + "+hours" : "") + "+with+" + (extend ? "Extend 60 minutes," : "") + (makeup ? "+Make-up Artist," : "") + (bts ? "+Behind the scene," : "") + (extra ? "+Extra Photos, " : "") + (island ? "+Island District, " : "") + "+add-ons"
   const [error, setError] = useState([]);
 
   const date = moment().format("MMMM DD YYYY");
@@ -173,7 +174,8 @@ export default function BookingForm() {
                                   onClick={handleAddHour}/>
                 </div> : null
             }
-            <div className="place-self-center">
+
+            {/*<div className="place-self-center">
               <div className="">
                 <div className="text-red-800 opacity-80 m-2">
                   Full name
@@ -209,7 +211,7 @@ export default function BookingForm() {
                        className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. leonardo@example.com"/>
               </div>
-            </div>
+            </div>*/}
             <div className="flex flex-col py-8 gap-4 place-self-center">
               <div className="text-red-800 opacity-80 mx-2">
                 Add-Ons (Optionals)
@@ -326,21 +328,21 @@ export default function BookingForm() {
               Estimated Total Cost: {estimatedCost} HKD
             </div>
           </div>
-          <button
-            onClick={handleSubmit}
-            disabled={true}
-            className="disabled:cursor-not-allowed disabled:grayscale group flex flex-col justify-self-center items-center justify-center gap-5 outline outline-2 outline-red-400 hover:bg-red-400 rounded-2xl pl-8 py-2">
-            <div className="flex items-center justify-center space-x-2 text-red-400 group-hover:text-white">
-              <div className="group-hover:opacity-0 transition duration-300 ease-in-out">
-                <ClipboardDocumentListIcon className="h-8"/>
+            <a href={WhatsAppLink}
+              //onClick={handleSubmit}
+              //disabled={isValidated}
+              className="disabled:cursor-not-allowed disabled:grayscale group flex flex-col justify-self-center items-center justify-center gap-5 outline outline-2 outline-red-400 hover:bg-red-400 rounded-2xl pl-8 py-2">
+              <div className="flex items-center justify-center space-x-2 text-red-400 group-hover:text-white">
+                <div className="group-hover:opacity-0 transition duration-300 ease-in-out">
+                  <ClipboardDocumentListIcon className="h-8"/>
+                </div>
+                <div className="text-2xl font-serif group-hover:-translate-x-10 duration-300 ease-in-out">
+                  {isValidated ? 'Invalid' : 'Submit'}
+                </div>
+                <PaperAirplaneIcon
+                  className="h-8 opacity-0 group-hover:-translate-x-9 group-hover:opacity-100 transition duration-500 ease-in-out"/>
               </div>
-              <div className="text-2xl font-serif group-hover:-translate-x-10 duration-300 ease-in-out">
-                {isValidated ? 'Invalid' : 'Submit'}
-              </div>
-              <PaperAirplaneIcon
-                className="h-8 opacity-0 group-hover:-translate-x-9 group-hover:opacity-100 transition duration-500 ease-in-out"/>
-            </div>
-          </button>
+            </a>
         </div>
       </form>
     </>
