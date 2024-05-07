@@ -22,7 +22,7 @@ export default function BookingForm() {
 
   let isValidated = (serviceType == "" || fullName == "" || phoneNumber.length !== 8 || email == "" || !email.includes("@") || !email.includes(".") || email.length < 5)
 
-  let estimatedCost = (serviceType == "Still Photography" ? 1680 : (Number(hour) * 980)) + (extend ? 880 : 0) + (makeup ? (serviceType == "Event Package" ? (Number(hour) * 440) : 880) : 0) + (bts ? 480 : 0) + (extra ? 120 : 0) + (island ? 120 : 0)
+  let estimatedCost = (serviceType == "Still Photography" ? 1680 : (Number(hour) * 980)) + (extend ? 880 : 0) + (makeup ? (serviceType == "Event Package" ? (Number(hour) * 440) : 880) : 0) + (bts ? 880 : 0) + (extra ? 120 : 0) + (island ? 180 : 0)
 
   let WhatsAppLink = "https://wa.me/85255460314?text=I+would+like+to+have+a+official+quotation" + (serviceType == "" ? "" : ("+of+"+ (serviceType) + (serviceType == "Event Package" ? "+for+" + hour + "+hours" : "") + ((extend || makeup || bts || island || extra) ? ("+with+" + (extend ? "Extend 60 minutes," : "") + (makeup ? "+Make-up Artist," : "") + (bts ? "+Behind the scene," : "") + (extra ? "+Extra Photos, " : "") + (island ? "+Island District, " : "") + "+add-ons") : "")))
   const [error, setError] = useState([]);
@@ -148,6 +148,7 @@ export default function BookingForm() {
                      onChange={e => {
                        setServiceType(e.target.value);
                        setHour("2")
+                       setExtend(false)
                      }}
                      className="hidden peer"/>
               <label
@@ -232,7 +233,7 @@ export default function BookingForm() {
                     <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                       <div>
                         <div className="text-red-800 font-bold">Extend 60 minute</div>
-                        <div className="text-red-800 text-opacity-40 text-sm">Total of 180-min service</div>
+                        <div className="text-red-800 text-opacity-40 text-sm">Total of 180-min</div>
                       </div>
                       <div className="font-bold text-red-800">+880 HKD</div>
                     </div>
@@ -252,11 +253,11 @@ export default function BookingForm() {
                 >
                   <div className="flex flex-row justify-between items-center w-[380px] ml-10 mr-4">
                     <div>
-                      <div className="text-red-800 font-bold">Make-up Artist</div>
+                      <div className="text-red-800 font-bold">{serviceType == "Event Package" ? "Make-up Artist^" : "Make-up Artist"}</div>
                       <div className="text-red-800 text-opacity-40 text-sm">Styling Artist Service</div>
                     </div>
                     <div
-                      className="font-bold text-red-800">{serviceType == "Event Package" ? "+440 HKD^" : "+880 HKD"}</div>
+                      className="font-bold text-red-800">{serviceType == "Event Package" ? "+440 HKD" : "+880 HKD"}</div>
                   </div>
                 </label>
               </div>
