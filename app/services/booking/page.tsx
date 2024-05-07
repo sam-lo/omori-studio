@@ -24,7 +24,7 @@ export default function BookingForm() {
 
   let estimatedCost = (serviceType == "Still Photography" ? 1680 : (Number(hour) * 980)) + (extend ? 880 : 0) + (makeup ? (serviceType == "Event Package" ? (Number(hour) * 440) : 880) : 0) + (bts ? 480 : 0) + (extra ? 120 : 0) + (island ? 120 : 0)
 
-  let WhatsAppLink = "https://wa.me/85255460314?text=I+would+like+to+have+a+official+quotation+of+"+ (serviceType) + (serviceType == "Event Package" ? "+for+" + hour + "+hours" : "") + "+with+" + (extend ? "Extend 60 minutes," : "") + (makeup ? "+Make-up Artist," : "") + (bts ? "+Behind the scene," : "") + (extra ? "+Extra Photos, " : "") + (island ? "+Island District, " : "") + "+add-ons"
+  let WhatsAppLink = "https://wa.me/85255460314?text=I+would+like+to+have+a+official+quotation" + (serviceType == "" ? "" : ("+of+"+ (serviceType) + (serviceType == "Event Package" ? "+for+" + hour + "+hours" : "") + ((extend || makeup || bts || island || extra) ? ("+with+" + (extend ? "Extend 60 minutes," : "") + (makeup ? "+Make-up Artist," : "") + (bts ? "+Behind the scene," : "") + (extra ? "+Extra Photos, " : "") + (island ? "+Island District, " : "") + "+add-ons") : "")))
   const [error, setError] = useState([]);
 
   const date = moment().format("MMMM DD YYYY");
@@ -128,6 +128,7 @@ export default function BookingForm() {
                      onChange={e => {
                        setServiceType(e.target.value);
                        setHour("0")
+                       setExtend(false)
                      }}
                      className="hidden peer"/>
               <label
@@ -337,7 +338,7 @@ export default function BookingForm() {
                   <ClipboardDocumentListIcon className="h-8"/>
                 </div>
                 <div className="text-2xl font-serif group-hover:-translate-x-10 duration-300 ease-in-out">
-                  {isValidated ? 'Invalid' : 'Submit'}
+                  {serviceType == "" ? 'Invalid' : 'Submit'}
                 </div>
                 <PaperAirplaneIcon
                   className="h-8 opacity-0 group-hover:-translate-x-9 group-hover:opacity-100 transition duration-500 ease-in-out"/>
