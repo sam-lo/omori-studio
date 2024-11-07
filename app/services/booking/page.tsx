@@ -184,7 +184,7 @@ export default function BookingForm() {
                 </div>
                 <input type="text"
                        id="name"
-                       onChange={(e) => setFullName(e.target.value)}
+                       onChange={(e)  s=> setFullName(e.target.value)}
                        value={fullName}
                        className="placeholder-red-800 placeholder:opacity-40 placeholder:italic text-red-800 text-xl py-2 px-4 mt-1 block w-80 sm:w-96 rounded-xl bg-red-100 border-0 border-transparent focus:border-red-400 focus:ring-0 peer"
                        placeholder="e.g. Leonardo da Vinci"/>
